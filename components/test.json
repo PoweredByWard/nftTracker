@@ -1,0 +1,7280 @@
+(this.webpackJsonphype_bears = this.webpackJsonphype_bears || []).push([
+	[
+		0
+	],
+	{
+		185: function (e, t, n) {},
+		187: function (e, t, n) {},
+		201: function (e) {
+			e.exports = JSON.parse(
+				{
+				"a": [
+					{
+						"inputs": [
+							{
+								"internalType": "contract IERC20",
+								"name": "_token",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "decimals",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "nonpayable",
+						"type": "constructor"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "user",
+								"type": "address"
+							},
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							}
+						],
+						"name": "Deposited",
+						"type": "event"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "previousOwner",
+								"type": "address"
+							},
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "newOwner",
+								"type": "address"
+							}
+						],
+						"name": "OwnershipTransferred",
+						"type": "event"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": false,
+								"internalType": "address",
+								"name": "token",
+								"type": "address"
+							},
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							}
+						],
+						"name": "Recovered",
+						"type": "event"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "user",
+								"type": "address"
+							},
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							}
+						],
+						"name": "SendBack",
+						"type": "event"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "oldValue",
+								"type": "uint256"
+							},
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "newValue",
+								"type": "uint256"
+							}
+						],
+						"name": "UpdateHardCapEthAmount",
+						"type": "event"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "oldValue",
+								"type": "uint256"
+							},
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "newValue",
+								"type": "uint256"
+							}
+						],
+						"name": "UpdateMaxDepositAmount",
+						"type": "event"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "oldValue",
+								"type": "uint256"
+							},
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "newValue",
+								"type": "uint256"
+							}
+						],
+						"name": "UpdateMinDepositAmount",
+						"type": "event"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "oldValue",
+								"type": "uint256"
+							},
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "newValue",
+								"type": "uint256"
+							}
+						],
+						"name": "UpdateTokenPerBNB",
+						"type": "event"
+					},
+					{
+						"inputs": [],
+						"name": "DENOMINATOR",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address payable",
+								"name": "_address",
+								"type": "address"
+							}
+						],
+						"name": "addWhiteList",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address[]",
+								"name": "_addresses",
+								"type": "address[]"
+							}
+						],
+						"name": "addWhiteListMulti",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "claim",
+						"outputs": [
+							{
+								"internalType": "bool",
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "claimEnabledStart",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "account",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "time",
+								"type": "uint256"
+							}
+						],
+						"name": "claimableByAddressAtTime",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "deposit",
+						"outputs": [],
+						"stateMutability": "payable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "",
+								"type": "address"
+							}
+						],
+						"name": "deposits",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "getDepositAmount",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "getLastTxList",
+						"outputs": [
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "tokenAmount",
+										"type": "uint256"
+									},
+									{
+										"internalType": "address",
+										"name": "buyer",
+										"type": "address"
+									}
+								],
+								"internalType": "struct PrivateSale.LastTx[3]",
+								"name": "",
+								"type": "tuple[3]"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "getLeftTimeAmount",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "hardCapEthAmount",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"name": "lastTxList",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "tokenAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "buyer",
+								"type": "address"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "maximumDepositEthAmount",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "minimumDepositEthAmount",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "owner",
+						"outputs": [
+							{
+								"internalType": "address",
+								"name": "",
+								"type": "address"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "percentPerPeriod",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "privateSaleEndTimestamp",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "privateSaleStartTimestamp",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "reachedHardCap",
+						"outputs": [
+							{
+								"internalType": "bool",
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "tokenAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tokenAmount",
+								"type": "uint256"
+							}
+						],
+						"name": "recoverBEP20",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "releaseFunds",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address payable",
+								"name": "_address",
+								"type": "address"
+							}
+						],
+						"name": "removeWhiteList",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address[]",
+								"name": "_addresses",
+								"type": "address[]"
+							}
+						],
+						"name": "removeWhiteListMulti",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "renounceOwnership",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "enabledTime",
+								"type": "uint256"
+							}
+						],
+						"name": "setClaimEnabled",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "newValue",
+								"type": "uint256"
+							}
+						],
+						"name": "setHardCapEthAmount",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "newValue",
+								"type": "uint256"
+							}
+						],
+						"name": "setMaxDepositAmount",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "newValue",
+								"type": "uint256"
+							}
+						],
+						"name": "setMinDepositAmount",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "newPeriod",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "newPercent",
+								"type": "uint256"
+							}
+						],
+						"name": "setPercentAndPeriod",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "start",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "end",
+								"type": "uint256"
+							}
+						],
+						"name": "setPrivateSaleTime",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "newValue",
+								"type": "uint256"
+							}
+						],
+						"name": "setTokenPerBNB",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "bool",
+								"name": "value",
+								"type": "bool"
+							}
+						],
+						"name": "setWhitelistEnabled",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "token",
+						"outputs": [
+							{
+								"internalType": "contract IERC20",
+								"name": "",
+								"type": "address"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "tokenBalanceOfContract",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "tokenBalanceOfSender",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "tokenPerBNB",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "totalDepositedEthBalance",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "newOwner",
+								"type": "address"
+							}
+						],
+						"name": "transferOwnership",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "",
+								"type": "address"
+							}
+						],
+						"name": "userAmounts",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "totalTokens",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "claimed",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "vestingPeriod",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "",
+								"type": "address"
+							}
+						],
+						"name": "whitelist",
+						"outputs": [
+							{
+								"internalType": "bool",
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "whitelistEnabled",
+						"outputs": [
+							{
+								"internalType": "bool",
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"stateMutability": "payable",
+						"type": "receive"
+					}
+				]
+			}
+			);
+		},
+		202: function (e) {
+			e.exports = JSON.parse(
+				'{
+				"a": [
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "mainContractAddress",
+								"type": "address"
+							}
+						],
+						"stateMutability": "nonpayable",
+						"type": "constructor"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "user",
+								"type": "address"
+							},
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							}
+						],
+						"name": "Bought",
+						"type": "event"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "previousOwner",
+								"type": "address"
+							},
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "newOwner",
+								"type": "address"
+							}
+						],
+						"name": "OwnershipTransferred",
+						"type": "event"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": false,
+								"internalType": "address",
+								"name": "token",
+								"type": "address"
+							},
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							}
+						],
+						"name": "Recovered",
+						"type": "event"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "user",
+								"type": "address"
+							},
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							}
+						],
+						"name": "SendBack",
+						"type": "event"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "oldValue",
+								"type": "uint256"
+							},
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "newValue",
+								"type": "uint256"
+							}
+						],
+						"name": "UpdateMaxDepositAmount",
+						"type": "event"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "oldValue",
+								"type": "uint256"
+							},
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "newValue",
+								"type": "uint256"
+							}
+						],
+						"name": "UpdateMinDepositAmount",
+						"type": "event"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "oldValue",
+								"type": "uint256"
+							},
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "newValue",
+								"type": "uint256"
+							}
+						],
+						"name": "UpdatePrice",
+						"type": "event"
+					},
+					{
+						"inputs": [],
+						"name": "buy",
+						"outputs": [],
+						"stateMutability": "payable",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "getDepositAmount",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "getLeftTimeAmount",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "maximumDepositBNBAmount",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "minimumDepositBNBAmount",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "owner",
+						"outputs": [
+							{
+								"internalType": "address",
+								"name": "",
+								"type": "address"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "price",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "privateSaleEndTimestamp",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "privateSaleStartTimestamp",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "tokenAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tokenAmount",
+								"type": "uint256"
+							}
+						],
+						"name": "recoverIERC20",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "releaseFunds",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "renounceOwnership",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "newValue",
+								"type": "uint256"
+							}
+						],
+						"name": "setMaxDepositAmount",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "newValue",
+								"type": "uint256"
+							}
+						],
+						"name": "setMinDepositAmount",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "newValue",
+								"type": "uint256"
+							}
+						],
+						"name": "setPrice",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "start",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "end",
+								"type": "uint256"
+							}
+						],
+						"name": "setPrivateSaleTime",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "token",
+						"outputs": [
+							{
+								"internalType": "contract IERC20",
+								"name": "",
+								"type": "address"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "totalDepositedBNBBalance",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "newOwner",
+								"type": "address"
+							}
+						],
+						"name": "transferOwnership",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					}
+				]
+			}'
+			);
+		},
+		203: function (e) {
+			e.exports = JSON.parse(
+				'{
+				"a": [
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "founder1",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "founder2",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "founder3",
+								"type": "address"
+							}
+						],
+						"stateMutability": "nonpayable",
+						"type": "constructor"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "owner",
+								"type": "address"
+							},
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "spender",
+								"type": "address"
+							},
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "value",
+								"type": "uint256"
+							}
+						],
+						"name": "Approval",
+						"type": "event"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "minTokensBeforeSwap",
+								"type": "uint256"
+							}
+						],
+						"name": "MinTokensBeforeSwapUpdated",
+						"type": "event"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "newOwner",
+								"type": "address"
+							},
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "endTime",
+								"type": "uint256"
+							}
+						],
+						"name": "OwnershipSet",
+						"type": "event"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": false,
+								"internalType": "contract IUniswapV2Router02",
+								"name": "routerAddress",
+								"type": "address"
+							},
+							{
+								"indexed": false,
+								"internalType": "address",
+								"name": "pairAddress",
+								"type": "address"
+							}
+						],
+						"name": "RouterSet",
+						"type": "event"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "tokensSwapped",
+								"type": "uint256"
+							},
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "ethReceived",
+								"type": "uint256"
+							},
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "tokensIntoLiqudity",
+								"type": "uint256"
+							}
+						],
+						"name": "SwapAndLiquify",
+						"type": "event"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": false,
+								"internalType": "bool",
+								"name": "enabled",
+								"type": "bool"
+							}
+						],
+						"name": "SwapAndLiquifyEnabledUpdated",
+						"type": "event"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "from",
+								"type": "address"
+							},
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "to",
+								"type": "address"
+							},
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "value",
+								"type": "uint256"
+							}
+						],
+						"name": "Transfer",
+						"type": "event"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "oldSellFeeMultiplier",
+								"type": "uint256"
+							},
+							{
+								"indexed": false,
+								"internalType": "uint256",
+								"name": "newSellFeeMultiplier",
+								"type": "uint256"
+							}
+						],
+						"name": "UpdateSellFeeMultiplier",
+						"type": "event"
+					},
+					{
+						"inputs": [],
+						"name": "DENOMINATOR",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "_antiDumpFee",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "_liquidityFee",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "_marketFee",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "_maxTxAmount",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "_taxFee",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "owner",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "spender",
+								"type": "address"
+							}
+						],
+						"name": "allowance",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "antiDumpTime",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "spender",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							}
+						],
+						"name": "approve",
+						"outputs": [
+							{
+								"internalType": "bool",
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "account",
+								"type": "address"
+							}
+						],
+						"name": "balanceOf",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "to",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							}
+						],
+						"name": "clearStuckBNBBalance",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "to",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "tokenAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							}
+						],
+						"name": "clearStuckTokenBalance",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "decimals",
+						"outputs": [
+							{
+								"internalType": "uint8",
+								"name": "",
+								"type": "uint8"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "spender",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "subtractedValue",
+								"type": "uint256"
+							}
+						],
+						"name": "decreaseAllowance",
+						"outputs": [
+							{
+								"internalType": "bool",
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "tAmount",
+								"type": "uint256"
+							}
+						],
+						"name": "deliver",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "disableAllFees",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "enableAllFees",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "account",
+								"type": "address"
+							}
+						],
+						"name": "excludeFromFee",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "account",
+								"type": "address"
+							}
+						],
+						"name": "excludeFromReward",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"name": "founders",
+						"outputs": [
+							{
+								"internalType": "address",
+								"name": "",
+								"type": "address"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "account",
+								"type": "address"
+							}
+						],
+						"name": "includeInFee",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "account",
+								"type": "address"
+							}
+						],
+						"name": "includeInReward",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "spender",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "addedValue",
+								"type": "uint256"
+							}
+						],
+						"name": "increaseAllowance",
+						"outputs": [
+							{
+								"internalType": "bool",
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "account",
+								"type": "address"
+							}
+						],
+						"name": "isExcludedFromFee",
+						"outputs": [
+							{
+								"internalType": "bool",
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "account",
+								"type": "address"
+							}
+						],
+						"name": "isExcludedFromReward",
+						"outputs": [
+							{
+								"internalType": "bool",
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "",
+								"type": "address"
+							}
+						],
+						"name": "isFounder",
+						"outputs": [
+							{
+								"internalType": "bool",
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "marketingWallet",
+						"outputs": [
+							{
+								"internalType": "address",
+								"name": "",
+								"type": "address"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "name",
+						"outputs": [
+							{
+								"internalType": "string",
+								"name": "",
+								"type": "string"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "",
+								"type": "address"
+							}
+						],
+						"name": "ownerEndTime",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "tAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "deductTransferFee",
+								"type": "bool"
+							}
+						],
+						"name": "reflectionFromToken",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "antiDumpFee",
+								"type": "uint256"
+							}
+						],
+						"name": "setAntiDumpFee",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "newTime",
+								"type": "uint256"
+							}
+						],
+						"name": "setAntiDumpTime",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "liquidityFee",
+								"type": "uint256"
+							}
+						],
+						"name": "setLiquidityFee",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "marketFee",
+								"type": "uint256"
+							}
+						],
+						"name": "setMarketFee",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "newWallet",
+								"type": "address"
+							}
+						],
+						"name": "setMarketingWallet",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "maxTxAmount",
+								"type": "uint256"
+							}
+						],
+						"name": "setMaxTxPercent",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "numTokensSellToAddToLiquidity",
+								"type": "uint256"
+							}
+						],
+						"name": "setNumTokensSellToAddToLiquidity",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "newOwner",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "endTime",
+								"type": "uint256"
+							}
+						],
+						"name": "setOwner",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "bool",
+								"name": "_enabled",
+								"type": "bool"
+							}
+						],
+						"name": "setSwapAndLiquifyEnabled",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "taxFee",
+								"type": "uint256"
+							}
+						],
+						"name": "setTaxFee",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "swapAndLiquifyEnabled",
+						"outputs": [
+							{
+								"internalType": "bool",
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "symbol",
+						"outputs": [
+							{
+								"internalType": "string",
+								"name": "",
+								"type": "string"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "rAmount",
+								"type": "uint256"
+							}
+						],
+						"name": "tokenFromReflection",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "totalFees",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "totalSupply",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "recipient",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							}
+						],
+						"name": "transfer",
+						"outputs": [
+							{
+								"internalType": "bool",
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "sender",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "recipient",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							}
+						],
+						"name": "transferFrom",
+						"outputs": [
+							{
+								"internalType": "bool",
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "uniswapV2Pair",
+						"outputs": [
+							{
+								"internalType": "address",
+								"name": "",
+								"type": "address"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "uniswapV2Router",
+						"outputs": [
+							{
+								"internalType": "contract IUniswapV2Router02",
+								"name": "",
+								"type": "address"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "index",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "newFounder",
+								"type": "address"
+							}
+						],
+						"name": "updateFounder",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "_router",
+								"type": "address"
+							}
+						],
+						"name": "updateRouter",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"stateMutability": "payable",
+						"type": "receive"
+					}
+				]
+			}'
+			);
+		},
+		204: function (e) {
+			e.exports = JSON.parse(
+				'{
+				"a": [
+					{
+						"constant": true,
+						"inputs": [],
+						"name": "name",
+						"outputs": [
+							{
+								"name": "",
+								"type": "string"
+							}
+						],
+						"payable": false,
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"constant": false,
+						"inputs": [
+							{
+								"name": "spender",
+								"type": "address"
+							},
+							{
+								"name": "value",
+								"type": "uint256"
+							}
+						],
+						"name": "approve",
+						"outputs": [
+							{
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"payable": false,
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"constant": true,
+						"inputs": [],
+						"name": "totalSupply",
+						"outputs": [
+							{
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"payable": false,
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"constant": false,
+						"inputs": [
+							{
+								"name": "sender",
+								"type": "address"
+							},
+							{
+								"name": "recipient",
+								"type": "address"
+							},
+							{
+								"name": "amount",
+								"type": "uint256"
+							}
+						],
+						"name": "transferFrom",
+						"outputs": [
+							{
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"payable": false,
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"constant": true,
+						"inputs": [],
+						"name": "decimals",
+						"outputs": [
+							{
+								"name": "",
+								"type": "uint8"
+							}
+						],
+						"payable": false,
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"constant": false,
+						"inputs": [
+							{
+								"name": "spender",
+								"type": "address"
+							},
+							{
+								"name": "addedValue",
+								"type": "uint256"
+							}
+						],
+						"name": "increaseAllowance",
+						"outputs": [
+							{
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"payable": false,
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"constant": false,
+						"inputs": [
+							{
+								"name": "value",
+								"type": "uint256"
+							}
+						],
+						"name": "burn",
+						"outputs": [],
+						"payable": false,
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"constant": true,
+						"inputs": [
+							{
+								"name": "account",
+								"type": "address"
+							}
+						],
+						"name": "balanceOf",
+						"outputs": [
+							{
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"payable": false,
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"constant": true,
+						"inputs": [],
+						"name": "symbol",
+						"outputs": [
+							{
+								"name": "",
+								"type": "string"
+							}
+						],
+						"payable": false,
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"constant": false,
+						"inputs": [
+							{
+								"name": "spender",
+								"type": "address"
+							},
+							{
+								"name": "subtractedValue",
+								"type": "uint256"
+							}
+						],
+						"name": "decreaseAllowance",
+						"outputs": [
+							{
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"payable": false,
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"constant": false,
+						"inputs": [
+							{
+								"name": "recipient",
+								"type": "address"
+							},
+							{
+								"name": "amount",
+								"type": "uint256"
+							}
+						],
+						"name": "transfer",
+						"outputs": [
+							{
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"payable": false,
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"constant": true,
+						"inputs": [
+							{
+								"name": "owner",
+								"type": "address"
+							},
+							{
+								"name": "spender",
+								"type": "address"
+							}
+						],
+						"name": "allowance",
+						"outputs": [
+							{
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"payable": false,
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"name": "symbol",
+								"type": "string"
+							},
+							{
+								"name": "decimals",
+								"type": "uint8"
+							},
+							{
+								"name": "totalSupply",
+								"type": "uint256"
+							},
+							{
+								"name": "feeReceiver",
+								"type": "address"
+							},
+							{
+								"name": "tokenOwnerAddress",
+								"type": "address"
+							}
+						],
+						"payable": true,
+						"stateMutability": "payable",
+						"type": "constructor"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": true,
+								"name": "from",
+								"type": "address"
+							},
+							{
+								"indexed": true,
+								"name": "to",
+								"type": "address"
+							},
+							{
+								"indexed": false,
+								"name": "value",
+								"type": "uint256"
+							}
+						],
+						"name": "Transfer",
+						"type": "event"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": true,
+								"name": "owner",
+								"type": "address"
+							},
+							{
+								"indexed": true,
+								"name": "spender",
+								"type": "address"
+							},
+							{
+								"indexed": false,
+								"name": "value",
+								"type": "uint256"
+							}
+						],
+						"name": "Approval",
+						"type": "event"
+					}
+				]
+			}'
+			);
+		},
+		205: function (e) {
+			e.exports = JSON.parse(
+				'{
+				"a": [
+					{
+						"constant": true,
+						"inputs": [],
+						"name": "name",
+						"outputs": [
+							{
+								"name": "",
+								"type": "string"
+							}
+						],
+						"payable": false,
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"constant": false,
+						"inputs": [
+							{
+								"name": "spender",
+								"type": "address"
+							},
+							{
+								"name": "value",
+								"type": "uint256"
+							}
+						],
+						"name": "approve",
+						"outputs": [
+							{
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"payable": false,
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"constant": true,
+						"inputs": [],
+						"name": "totalSupply",
+						"outputs": [
+							{
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"payable": false,
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"constant": false,
+						"inputs": [
+							{
+								"name": "sender",
+								"type": "address"
+							},
+							{
+								"name": "recipient",
+								"type": "address"
+							},
+							{
+								"name": "amount",
+								"type": "uint256"
+							}
+						],
+						"name": "transferFrom",
+						"outputs": [
+							{
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"payable": false,
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"constant": true,
+						"inputs": [],
+						"name": "decimals",
+						"outputs": [
+							{
+								"name": "",
+								"type": "uint8"
+							}
+						],
+						"payable": false,
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"constant": false,
+						"inputs": [
+							{
+								"name": "spender",
+								"type": "address"
+							},
+							{
+								"name": "addedValue",
+								"type": "uint256"
+							}
+						],
+						"name": "increaseAllowance",
+						"outputs": [
+							{
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"payable": false,
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"constant": false,
+						"inputs": [
+							{
+								"name": "value",
+								"type": "uint256"
+							}
+						],
+						"name": "burn",
+						"outputs": [],
+						"payable": false,
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"constant": true,
+						"inputs": [
+							{
+								"name": "account",
+								"type": "address"
+							}
+						],
+						"name": "balanceOf",
+						"outputs": [
+							{
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"payable": false,
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"constant": true,
+						"inputs": [],
+						"name": "symbol",
+						"outputs": [
+							{
+								"name": "",
+								"type": "string"
+							}
+						],
+						"payable": false,
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"constant": false,
+						"inputs": [
+							{
+								"name": "spender",
+								"type": "address"
+							},
+							{
+								"name": "subtractedValue",
+								"type": "uint256"
+							}
+						],
+						"name": "decreaseAllowance",
+						"outputs": [
+							{
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"payable": false,
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"constant": false,
+						"inputs": [
+							{
+								"name": "recipient",
+								"type": "address"
+							},
+							{
+								"name": "amount",
+								"type": "uint256"
+							}
+						],
+						"name": "transfer",
+						"outputs": [
+							{
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"payable": false,
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"constant": true,
+						"inputs": [
+							{
+								"name": "owner",
+								"type": "address"
+							},
+							{
+								"name": "spender",
+								"type": "address"
+							}
+						],
+						"name": "allowance",
+						"outputs": [
+							{
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"payable": false,
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"name": "symbol",
+								"type": "string"
+							},
+							{
+								"name": "decimals",
+								"type": "uint8"
+							},
+							{
+								"name": "totalSupply",
+								"type": "uint256"
+							},
+							{
+								"name": "feeReceiver",
+								"type": "address"
+							},
+							{
+								"name": "tokenOwnerAddress",
+								"type": "address"
+							}
+						],
+						"payable": true,
+						"stateMutability": "payable",
+						"type": "constructor"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": true,
+								"name": "from",
+								"type": "address"
+							},
+							{
+								"indexed": true,
+								"name": "to",
+								"type": "address"
+							},
+							{
+								"indexed": false,
+								"name": "value",
+								"type": "uint256"
+							}
+						],
+						"name": "Transfer",
+						"type": "event"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": true,
+								"name": "owner",
+								"type": "address"
+							},
+							{
+								"indexed": true,
+								"name": "spender",
+								"type": "address"
+							},
+							{
+								"indexed": false,
+								"name": "value",
+								"type": "uint256"
+							}
+						],
+						"name": "Approval",
+						"type": "event"
+					}
+				]
+			}'
+			);
+		},
+		206: function (e) {
+			e.exports = JSON.parse(
+				'{
+				"a": [
+					{
+						"inputs": [],
+						"stateMutability": "nonpayable",
+						"type": "constructor"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "owner",
+								"type": "address"
+							},
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "approved",
+								"type": "address"
+							},
+							{
+								"indexed": true,
+								"internalType": "uint256",
+								"name": "tokenId",
+								"type": "uint256"
+							}
+						],
+						"name": "Approval",
+						"type": "event"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "owner",
+								"type": "address"
+							},
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "operator",
+								"type": "address"
+							},
+							{
+								"indexed": false,
+								"internalType": "bool",
+								"name": "approved",
+								"type": "bool"
+							}
+						],
+						"name": "ApprovalForAll",
+						"type": "event"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "previousOwner",
+								"type": "address"
+							},
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "newOwner",
+								"type": "address"
+							}
+						],
+						"name": "OwnershipTransferred",
+						"type": "event"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "from",
+								"type": "address"
+							},
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "to",
+								"type": "address"
+							},
+							{
+								"indexed": true,
+								"internalType": "uint256",
+								"name": "tokenId",
+								"type": "uint256"
+							}
+						],
+						"name": "Transfer",
+						"type": "event"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address[]",
+								"name": "_addresses",
+								"type": "address[]"
+							}
+						],
+						"name": "addMultipleToWhitelist",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "account",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							}
+						],
+						"name": "addPartnerMint",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "_newAddress",
+								"type": "address"
+							}
+						],
+						"name": "addToWhitelist",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "",
+								"type": "address"
+							}
+						],
+						"name": "addressMinted",
+						"outputs": [
+							{
+								"internalType": "bool",
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "to",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tokenId",
+								"type": "uint256"
+							}
+						],
+						"name": "approve",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "owner",
+								"type": "address"
+							}
+						],
+						"name": "balanceOf",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "_address",
+								"type": "address"
+							},
+							{
+								"internalType": "bytes",
+								"name": "_signature",
+								"type": "bytes"
+							}
+						],
+						"name": "canMint",
+						"outputs": [
+							{
+								"internalType": "bool",
+								"name": "",
+								"type": "bool"
+							},
+							{
+								"internalType": "string",
+								"name": "",
+								"type": "string"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "tokenId",
+								"type": "uint256"
+							}
+						],
+						"name": "getApproved",
+						"outputs": [
+							{
+								"internalType": "address",
+								"name": "",
+								"type": "address"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "owner",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "operator",
+								"type": "address"
+							}
+						],
+						"name": "isApprovedForAll",
+						"outputs": [
+							{
+								"internalType": "bool",
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "mintActive",
+						"outputs": [
+							{
+								"internalType": "bool",
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "mintLimit",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "_numOfTokens",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bytes",
+								"name": "_signature",
+								"type": "bytes"
+							}
+						],
+						"name": "mintNFT",
+						"outputs": [],
+						"stateMutability": "payable",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "mintPrice",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "name",
+						"outputs": [
+							{
+								"internalType": "string",
+								"name": "",
+								"type": "string"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "owner",
+						"outputs": [
+							{
+								"internalType": "address",
+								"name": "",
+								"type": "address"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "tokenId",
+								"type": "uint256"
+							}
+						],
+						"name": "ownerOf",
+						"outputs": [
+							{
+								"internalType": "address",
+								"name": "",
+								"type": "address"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "partnerMintAmount",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "",
+								"type": "address"
+							}
+						],
+						"name": "partnerMintAvailableBy",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address[]",
+								"name": "_to",
+								"type": "address[]"
+							}
+						],
+						"name": "partnersMintMultiple",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "proxyRegistryAddress",
+						"outputs": [
+							{
+								"internalType": "address",
+								"name": "",
+								"type": "address"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "_address",
+								"type": "address"
+							}
+						],
+						"name": "removeFromWhitelist",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address[]",
+								"name": "_addresses",
+								"type": "address[]"
+							}
+						],
+						"name": "removeMultipleFromWhitelist",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "renounceOwnership",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "reveal",
+						"outputs": [
+							{
+								"internalType": "bool",
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "bool",
+								"name": "_status",
+								"type": "bool"
+							}
+						],
+						"name": "revealNow",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "from",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "to",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tokenId",
+								"type": "uint256"
+							}
+						],
+						"name": "safeTransferFrom",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "from",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "to",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tokenId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bytes",
+								"name": "_data",
+								"type": "bytes"
+							}
+						],
+						"name": "safeTransferFrom",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "operator",
+								"type": "address"
+							},
+							{
+								"internalType": "bool",
+								"name": "approved",
+								"type": "bool"
+							}
+						],
+						"name": "setApprovalForAll",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "bool",
+								"name": "_isActive",
+								"type": "bool"
+							}
+						],
+						"name": "setMintActive",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "string",
+								"name": "_blindURI",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "_URI",
+								"type": "string"
+							}
+						],
+						"name": "setURIs",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "_address",
+								"type": "address"
+							}
+						],
+						"name": "setWhitelistSigner",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "bytes4",
+								"name": "_interfaceId",
+								"type": "bytes4"
+							}
+						],
+						"name": "supportsInterface",
+						"outputs": [
+							{
+								"internalType": "bool",
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "symbol",
+						"outputs": [
+							{
+								"internalType": "string",
+								"name": "",
+								"type": "string"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "index",
+								"type": "uint256"
+							}
+						],
+						"name": "tokenByIndex",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "owner",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "index",
+								"type": "uint256"
+							}
+						],
+						"name": "tokenOfOwnerByIndex",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "_tokenId",
+								"type": "uint256"
+							}
+						],
+						"name": "tokenURI",
+						"outputs": [
+							{
+								"internalType": "string",
+								"name": "",
+								"type": "string"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "totalSupply",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "from",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "to",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tokenId",
+								"type": "uint256"
+							}
+						],
+						"name": "transferFrom",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "newOwner",
+								"type": "address"
+							}
+						],
+						"name": "transferOwnership",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "_newLimit",
+								"type": "uint256"
+							}
+						],
+						"name": "updateMintLimit",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "_newPrice",
+								"type": "uint256"
+							}
+						],
+						"name": "updateMintPrice",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "",
+								"type": "address"
+							}
+						],
+						"name": "whitelist",
+						"outputs": [
+							{
+								"internalType": "bool",
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "whitelistSigner",
+						"outputs": [
+							{
+								"internalType": "address",
+								"name": "",
+								"type": "address"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "withdraw",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					}
+				]
+			}'
+			);
+		},
+		244: function (e, t) {},
+		286: function (e, t, n) {
+			"use strict";
+			n.r(t);
+			var a,
+				i,
+				s,
+				r = n(0),
+				o = n.n(r),
+				u = n(55),
+				p = n.n(u),
+				c = n(39),
+				l = n(48),
+				d = Object(l.a)(),
+				y = n(38),
+				m = n(6),
+				b = n.n(m),
+				f = n(63),
+				j = n(28),
+				x = Object(j.b)("global|update-version"),
+				h = Object(j.d)({
+					name: "Block",
+					initialState: {
+						currentBlock: 0,
+						initialBlock: 0,
+				},
+					reducers: {
+						setBlock: function (e, t) {
+						0 === e.initialBlock && (e.initialBlock = t.payload),
+								(e.currentBlock = t.payload);
+					},
+				},
+			}),
+				O = h.actions.setBlock,
+				g = h.reducer,
+				T = n(17),
+				v = Object(j.b)("user/toggleTheme"),
+				w = Object(j.b)("user/setTheme"),
+				k = n(7),
+				M = n(200);
+			!(function (e) {
+				(e[(e.BSC_TEST = 97)
+				] = "BSC_TEST"),
+					(e[(e.BSC_PROD = 56)
+				] = "BSC_PROD"),
+					(e[(e.ETH_RINKEBY = 4)
+				] = "ETH_RINKEBY"),
+					(e[(e.ETH_ROPSTEN = 3)
+				] = "ETH_ROPSTEN"),
+					(e[(e.ETH_PROD = 1)
+				] = "ETH_PROD"),
+					(e[(e.XDC_TEST = 51)
+				] = "XDC_TEST"),
+					(e[(e.XDC_PROD = 50)
+				] = "XDC_PROD");
+			})(a || (a = {})),
+				(function (e) {
+					(e[(e.test = 0)
+				] = "test"), (e[(e.prod = 1)
+				] = "prod");
+			})(i || (i = {}));
+			var S,
+				A,
+				E,
+				C,
+				I,
+				R =
+					((s = {}),
+					Object(k.a)(s, a.BSC_TEST,
+			{
+						rpcUrls: [
+					"https://data-seed-prebsc-1-s1.binance.org:8545/",
+					"https://data-seed-prebsc-1-s2.binance.org:8545/",
+				],
+						blockExplorerUrls: [
+					"https://testnet.bscscan.com"
+				],
+						chainName: "BSC - Testnet",
+						nativeCurrency: {
+							name: "BNB",
+							symbol: "BNB",
+							decimals: 18,
+				},
+			}),
+					Object(k.a)(s, a.BSC_PROD,
+			{
+						rpcUrls: [
+					"https://bsc-dataseed.binance.org/",
+					"https://bsc-dataseed1.defibit.io/",
+					"https://bsc-dataseed1.ninicoin.io/",
+				],
+						blockExplorerUrls: [
+					"https://bscscan.com"
+				],
+						chainName: "Binance Smart Chain",
+						nativeCurrency: {
+							name: "BNB",
+							symbol: "BNB",
+							decimals: 18,
+				},
+			}),
+					Object(k.a)(s, a.ETH_RINKEBY,
+			{
+						rpcUrls: [
+					"https://rinkeby.infura.io/v3/a1813bc99a3548a8a5479c9ff111afcf",
+				],
+						blockExplorerUrls: [
+					"https://rinkeby.etherscan.io"
+				],
+						chainName: "Ethereum Rinkeby Testnet",
+						nativeCurrency: {
+							name: "Ether",
+							symbol: "ETH",
+							decimals: 18,
+				},
+			}),
+					Object(k.a)(s, a.ETH_ROPSTEN,
+			{
+						rpcUrls: [
+					"https://ropsten.infura.io/v3/a1813bc99a3548a8a5479c9ff111afcf",
+				],
+						blockExplorerUrls: [
+					"https://ropsten.etherscan.io"
+				],
+						chainName: "Ethereum Ropsten Testnet",
+						nativeCurrency: {
+							name: "Ether",
+							symbol: "ETH",
+							decimals: 18,
+				},
+			}),
+					Object(k.a)(s, a.ETH_PROD,
+			{
+						rpcUrls: [
+					""
+				],
+						blockExplorerUrls: [
+					"https://etherscan.io"
+				],
+						chainName: "Ethereum Mainnet",
+						nativeCurrency: {
+							name: "Ether",
+							symbol: "ETH",
+							decimals: 18,
+				},
+			}),
+					Object(k.a)(s, a.XDC_TEST,
+			{
+						rpcUrls: [
+					"https://rpc.apothem.network"
+				],
+						blockExplorerUrls: [
+					"https://explorer.apothem.network"
+				],
+						chainName: "XinFin Apothem Testnet",
+						nativeCurrency: {
+							name: "XDC",
+							symbol: "TXDC",
+							decimals: 18,
+				},
+			}),
+					Object(k.a)(s, a.XDC_PROD,
+			{
+						rpcUrls: [
+					"https://rpc.xinfin.network"
+				],
+						blockExplorerUrls: [
+					"https://explorer.xinfin.network/"
+				],
+						chainName: "XinFin Network Mainnet",
+						nativeCurrency: {
+							name: "XDC",
+							symbol: "XDC",
+							decimals: 18,
+				},
+			}),
+					s),
+				D =
+					((S = {}),
+					Object(k.a)(S, a.BSC_PROD, !0),
+					Object(k.a)(S, a.XDC_PROD, !0),
+					Object(k.a)(S, a.ETH_PROD, !0),
+					S),
+				B = n(201),
+				N = n(202),
+				F = n(203),
+				P = n(204),
+				L = n(205),
+				_ = n(206),
+				H = [
+				"0x7F367cC41522cE07553e823bf3be79A889DEbe1B",
+				"0xd882cFc20F52f2599D84b8e8D58C7FB62cfE344b",
+				"0x901bb9583b24D97e995513C6778dc6888AB6870e",
+				"0xA7e5d5A720f06526557c513402f2e6B5fA20b008",
+				"0x8576aCC5C05D6Ce88f4e49bf65BdF0C62F91353C",
+			],
+				W = "connectorId",
+				U = "isDark",
+				Y =
+					((A = {}),
+					Object(k.a)(A, i.prod,
+			""),
+					Object(k.a)(A, i.test,
+			"0x107715A355AFa7bFC3e18196ba007D8023980586"),
+					A),
+				V =
+					((E = {}),
+					Object(k.a)(E, i.prod,
+			""),
+					Object(k.a)(E, i.test,
+			"0x67204941D0cAEB001b0FB70D10EF5aC44D463413"),
+					E),
+				z =
+					((C = {}),
+					Object(k.a)(C, i.prod,
+			""),
+					Object(k.a)(C, i.test,
+			"0x5514D4f9E11dC223ddc3a6D54B3c8dD32Db8bE89"),
+					C),
+				X = Object(M.parseInt)("4"),
+				q = D[X
+			] ? i.prod : i.test,
+				J = R[X
+			],
+				G = Object(T.a)(
+					Object(T.a)({}, J),
+			{},
+			{
+						token: {
+							address: Y[q
+					],
+							abi: q === i.prod ? P.a : F.a,
+				},
+						privateSale: {
+							address: V[q
+					],
+							abi: q === i.prod ? N.a : B.a,
+				},
+						nft: {
+							address: z[q
+					],
+							abi: q === i.prod ? L.a : _.a,
+				},
+						chainId: X,
+			}
+				),
+				Q = function () {
+					return J.rpcUrls[
+					0
+				];
+			},
+				K = {
+					isDark: Boolean(
+						JSON.parse(window.localStorage.getItem(U) || "false")
+					),
+			},
+				Z = Object(j.c)(K, function (e) {
+					return e
+						.addCase(v, function (e) {
+							return (
+								window.localStorage.setItem(U, JSON.stringify(!e.isDark)),
+								Object(T.a)(
+									Object(T.a)({}, e),
+					{},
+					{
+										isDark: !e.isDark,
+					}
+								)
+							);
+				})
+						.addCase(w, function (e, t) {
+							var n = t.payload.isDark;
+							return Object(T.a)(
+								Object(T.a)({}, e),
+					{},
+					{
+									isDark: n,
+					}
+							);
+				});
+			}),
+				$ = Object(j.b)("token/fetchToken"),
+				ee = Object(j.b)("token/fetchTokenSuccess"),
+				te = Object(j.b)("token/fetchTokenError"),
+				ne = Object(j.b)("token/updateTokenPartial");
+			!(function (e) {
+				(e.INITIAL = "initial"),
+					(e.PENDING = "pending"),
+					(e.SUCCESS = "success"),
+					(e.ERROR = "error");
+			})(I || (I = {}));
+			var ae = {
+					stateStatus: I.INITIAL,
+					prefetchStatus: I.INITIAL,
+					error: null,
+			},
+				ie = Object(T.a)(
+					Object(T.a)({}, ae),
+			{},
+			{
+						networkBalance: "0",
+						balance: "0",
+						allowance: "0",
+						symbol: "",
+						name: "",
+						decimals: 18,
+						price: -1,
+			}
+				),
+				se = Object(j.c)(ie, function (e) {
+					return e
+						.addCase($, function (e) {
+							return Object(T.a)(
+								Object(T.a)({}, e),
+					{},
+					{
+									stateStatus: I.PENDING,
+					}
+							);
+				})
+						.addCase(ee, function (e, t) {
+							var n = t.payload;
+							return Object(T.a)(
+								Object(T.a)(Object(T.a)({}, e), n.tokenData),
+					{},
+					{
+									stateStatus: I.SUCCESS,
+					}
+							);
+				})
+						.addCase(te, function (e, t) {
+							var n = t.payload;
+							return Object(T.a)(
+								Object(T.a)({}, e),
+					{},
+					{
+									stateStatus: I.ERROR,
+									error: n.error,
+					}
+							);
+				})
+						.addCase(ne, function (e, t) {
+							var n = t.payload;
+							return Object(T.a)(Object(T.a)({}, e), n);
+				});
+			}),
+				re = Object(j.b)("sale/fetchPrivateSale"),
+				oe = Object(j.b)("sale/fetchPrivateSaleSuccess"),
+				ue = Object(j.b)("sale/fetchPrivateSaleError"),
+				pe = Object(T.a)(
+					Object(T.a)({}, ae),
+			{},
+			{
+						claimEnabledStart: 0,
+						getLastTxList: [],
+						getLeftTimeAmount: -1,
+						hardCapEthAmount: "0",
+						maximumDepositEthAmount: "0",
+						minimumDepositEthAmount: "0",
+						percentPerPeriod: 0,
+						privateSaleEndTimestamp: 0,
+						privateSaleStartTimestamp: 0,
+						reachedHardCap: !1,
+						tokenBalanceOfContract: "0",
+						tokenPerBNB: 0,
+						totalDepositedEthBalance: "0",
+						vestingPeriod: 0,
+						whitelistEnabled: !1,
+						claimableByAddressAtTime: "0",
+						deposits: "0",
+						userAmounts: {
+							totalTokens: "0",
+							claimed: "0",
+				},
+						whitelist: !1,
+						withAccountStateStatus: I.INITIAL,
+			}
+				),
+				ce = Object(j.c)(pe, function (e) {
+					return e
+						.addCase(re, function (e) {
+							return Object(T.a)(
+								Object(T.a)({}, e),
+					{},
+					{
+									stateStatus: I.PENDING,
+					}
+							);
+				})
+						.addCase(oe, function (e, t) {
+							var n = t.payload;
+							return Object(T.a)(
+								Object(T.a)(Object(T.a)({}, e), n.data),
+					{},
+					{
+									stateStatus: I.SUCCESS,
+					}
+							);
+				})
+						.addCase(ue, function (e, t) {
+							var n = t.payload;
+							return Object(T.a)(
+								Object(T.a)({}, e),
+					{},
+					{
+									stateStatus: I.ERROR,
+									error: n.error,
+					}
+							);
+				});
+			}),
+				le = Object(j.b)("token/prefetchNFT"),
+				de = Object(j.b)("token/prefetchNFTSuccess"),
+				ye = Object(j.b)("token/prefetchNFTError"),
+				me = Object(j.b)("token/fetchNFT"),
+				be = Object(j.b)("token/fetchNFTSuccess"),
+				fe = Object(j.b)("token/fetchNFTError"),
+				je = Object(T.a)(
+					Object(T.a)({}, ae),
+			{},
+			{
+						addressMinted: !0,
+						balance: 0,
+						partnerMintAvailableBy: 0,
+						inWhitelist: !1,
+						mintActive: !1,
+						mintLimit: 1,
+						name: "",
+						symbol: "",
+						totalSupply: 0,
+						networkBalance: "0",
+						price: "0",
+			}
+				),
+				xe = Object(j.c)(je, function (e) {
+					return e
+						.addCase(le, function (e) {
+							return Object(T.a)(
+								Object(T.a)({}, e),
+					{},
+					{
+									prefetchStatus: I.PENDING,
+					}
+							);
+				})
+						.addCase(de, function (e, t) {
+							var n = t.payload;
+							return Object(T.a)(
+								Object(T.a)(Object(T.a)({}, e), n.nftData),
+					{},
+					{
+									prefetchStatus: I.SUCCESS,
+					}
+							);
+				})
+						.addCase(ye, function (e, t) {
+							var n = t.payload;
+							return Object(T.a)(
+								Object(T.a)({}, e),
+					{},
+					{
+									prefetchStatus: I.ERROR,
+									error: n.error,
+					}
+							);
+				})
+						.addCase(me, function (e) {
+							return Object(T.a)(
+								Object(T.a)({}, e),
+					{},
+					{
+									stateStatus: I.PENDING,
+					}
+							);
+				})
+						.addCase(be, function (e, t) {
+							var n = t.payload;
+							return Object(T.a)(
+								Object(T.a)(Object(T.a)({}, e), n.nftData),
+					{},
+					{
+									stateStatus: I.SUCCESS,
+					}
+							);
+				})
+						.addCase(fe, function (e, t) {
+							var n = t.payload;
+							return Object(T.a)(
+								Object(T.a)({}, e),
+					{},
+					{
+									stateStatus: I.ERROR,
+									error: n.error,
+					}
+							);
+				});
+			}),
+				he = Object(j.a)({
+					devTools: !1,
+					reducer: {
+						block: g,
+						user: Z,
+						contractToken: se,
+						contractPrivateSale: ce,
+						contractNFT: xe,
+				},
+			});
+			he.dispatch(x());
+			var Oe = function () {
+					return Object(f.b)();
+			},
+				ge = he,
+				Te = n(23),
+				ve = "visibilityState" in document;
+			function we() {
+				return !ve || "visible" === document.visibilityState;
+			}
+			var ke,
+				Me,
+				Se = n(108),
+				Ae = new Se.a.providers.JsonRpcProvider(Q()),
+				Ee = function () {
+					var e = Object(r.useRef)(null),
+						t = Oe(),
+						n = (function () {
+							var e = Object(r.useState)(we()),
+								t = Object(Te.a)(e,
+					2),
+								n = t[
+						0
+					],
+								a = t[
+						1
+					];
+							return (
+								Object(r.useEffect)(
+									function () {
+										if (ve) {
+											var e = function () {
+												a(we());
+							};
+											return (
+												document.addEventListener("visibilitychange", e),
+												function () {
+													document.removeEventListener("visibilitychange", e);
+							}
+											);
+						}
+					},
+					[a
+					]
+								),
+								n
+							);
+				})();
+					Object(r.useEffect)(
+						function () {
+							return (
+								n
+									? (e.current = setInterval(
+											Object(y.a)(
+												b.a.mark(function e() {
+													var n;
+													return b.a.wrap(function (e) {
+														for (;;)
+															switch ((e.prev = e.next)) {
+																case 0:
+																	return (e.next = 2), Ae.getBlockNumber();
+																case 2:
+																	(n = e.sent), t(O(n));
+																case 4:
+																case "end":
+																	return e.stop();
+							}
+						}, e);
+					})
+											),
+					6e3
+									  ))
+									: clearInterval(e.current),
+								function () {
+									return clearInterval(e.current);
+					}
+							);
+				},
+				[t, e, n
+				]
+					);
+			},
+				Ce = n(130),
+				Ie = n(112);
+			!(function (e) {
+				(e.Injected = "injected"), (e.WalletConnect = "walletconnect");
+			})(Me || (Me = {}));
+			var Re = [Me.Injected, Me.WalletConnect
+			],
+				De = new Ce.a({
+					supportedChainIds: [G.chainId
+				],
+			}),
+				Be = new Ie.b({
+					rpc: Object(k.a)({}, G.chainId, Q()),
+					supportedChainIds: [G.chainId
+				],
+					qrcode: !0,
+					chainId: G.chainId,
+			}),
+				Ne =
+					((ke = {}),
+					Object(k.a)(ke, Me.Injected,
+			{
+						connector: De,
+						name: "MetaMask",
+						iconName: "metamask.svg",
+						description: "Easy-to-use browser extension.",
+						href: G.blockExplorerUrls[
+					0
+				],
+						color: "#E8831D",
+			}),
+					Object(k.a)(ke, Me.WalletConnect,
+			{
+						connector: Be,
+						name: "WalletConnect",
+						iconName: "walletConnect.svg",
+						description: "Connect to Trust Wallet, Rainbow Wallet and more...",
+						href: null,
+						color: "#4196FC",
+						mobile: !0,
+			}),
+					ke),
+				Fe = function (e) {
+					var t = new Se.a.providers.Web3Provider(e);
+					return (t.pollingInterval = 12e3), t;
+			},
+				Pe = n(61),
+				Le = n(79),
+				_e = {
+					hasRegistered: !1,
+					isInitialized: !1,
+					isLoading: !1,
+			},
+				He = Object(j.d)({
+					name: "profile",
+					initialState: _e,
+					reducers: {
+						profileFetchStart: function (e) {
+							return Object(T.a)(
+								Object(T.a)({}, e),
+						{},
+						{
+									isLoading: !0,
+						}
+							);
+					},
+						profileClear: function () {
+							return Object(T.a)({}, _e);
+					},
+				},
+			}),
+				We = He.actions,
+				Ue = We.profileClear,
+				Ye =
+					(We.profileFetchStart,
+					He.reducer,
+					(function () {
+						var e = Object(y.a)(
+							b.a.mark(function e() {
+								var t, n, a;
+								return b.a.wrap(
+									function (e) {
+										for (;;)
+											switch ((e.prev = e.next)) {
+												case 0:
+													if (!(t = window.ethereum) || !t.request) {
+														e.next = 28;
+														break;
+							}
+													return (
+														(e.prev = 2),
+														(e.next = 5),
+														t.request({
+															method: "wallet_switchEthereumChain",
+															params: [
+									{
+																	chainId: "0x".concat(G.chainId.toString(16)),
+									},
+								],
+							})
+													);
+												case 5:
+													return (
+														(n = e.sent), console.log(n), e.abrupt("return", !0)
+													);
+												case 10:
+													if (
+														((e.prev = 10),
+														(e.t0 = e.catch(2)),
+							4902 !== e.t0.code)
+													) {
+														e.next = 24;
+														break;
+							}
+													return (
+														(a = [
+															Object(T.a)(
+																Object(T.a)({}, J),
+								{},
+								{
+																	chainId: "0x".concat(G.chainId.toString(16)),
+								}
+															),
+							]),
+														(e.prev = 14),
+														(e.next = 17),
+														t.request({
+															method: "wallet_addEthereumChain",
+															params: a,
+							})
+													);
+												case 17:
+													return e.abrupt("return", !0);
+												case 20:
+													return (
+														(e.prev = 20),
+														(e.t1 = e.catch(14)),
+														console.error(
+															"Failed to setup the network in Metamask",
+															e.t0
+														),
+														e.abrupt("return", !1)
+													);
+												case 24:
+													return (
+														console.error(
+															"Failed to setup the network in Metamask",
+															e.t0
+														),
+														e.abrupt("return", !1)
+													);
+												case 26:
+													e.next = 30;
+													break;
+												case 28:
+													return (
+														console.error(
+															"Can't setup the network on metamask because window.ethereum is undefined"
+														),
+														e.abrupt("return", !1)
+													);
+												case 30:
+												case "end":
+													return e.stop();
+						}
+					},
+									e,
+					null,
+					[
+						[
+							2,
+							10
+						],
+						[
+							14,
+							20
+						],
+					]
+								);
+				})
+						);
+						return function () {
+							return e.apply(this, arguments);
+				};
+			})()),
+				Ve = function () {
+					var e = Oe(),
+						t = Object(Pe.c)(),
+						n = t.activate,
+						a = t.deactivate,
+						i = Object(r.useCallback)(
+							function (e) {
+								var t;
+								try {
+									t = Ne[e
+						].connector;
+					} catch (i) {
+									(t = null),
+										i instanceof TypeError && window.localStorage.removeItem(W);
+					}
+								t
+									? n(
+											t,
+											function () {
+												return null;
+					},
+											!0
+									  ).then(
+											function () {
+												window.localStorage.setItem(W, JSON.stringify(e));
+					},
+											(function () {
+												var e = Object(y.a)(
+													b.a.mark(function e(i) {
+														return b.a.wrap(function (e) {
+															for (;;)
+																switch ((e.prev = e.next)) {
+																	case 0:
+																		if (!(i instanceof Pe.a)) {
+																			e.next = 7;
+																			break;
+									}
+																		return (e.next = 3), Ye();
+																	case 3:
+																		e.sent && n(t), (e.next = 9);
+																		break;
+																	case 7:
+																		window.localStorage.removeItem(W),
+																			i instanceof Ce.b &&
+																				Object(Le.b)(
+																					"Sorry there is no provider"
+																				);
+																	case 9:
+																		i instanceof Ie.a &&
+																			(t instanceof Ie.b &&
+																				(t.walletConnectProvider = void 0),
+																			a()),
+																			console.log(i);
+																	case 11:
+																	case "end":
+																		return e.stop();
+								}
+							}, e);
+						})
+												);
+												return function (t) {
+													return e.apply(this, arguments);
+						};
+					})()
+									  )
+									: console.log("Fucked up");
+				},
+				[n, a
+				]
+						);
+					return {
+						login: i,
+						logout: Object(r.useCallback)(
+							function () {
+								e(Ue()),
+									a(),
+									window.localStorage.getItem("walletconnect") &&
+										(Ne.walletconnect.connector.close(),
+										(Ne.walletconnect.connector.walletConnectProvider = null)),
+									window.localStorage.removeItem(W);
+					},
+					[a, e
+					]
+						),
+				};
+			},
+				ze = function () {
+					var e = Ve().login;
+					Object(r.useEffect)(
+						function () {
+							var t = JSON.parse(window.localStorage.getItem(W) || "false");
+							t && e(t);
+				},
+				[e
+				]
+					);
+			},
+				Xe = (n(185), n(212)),
+				qe = [
+				"library",
+				"chainId"
+			],
+				Je = function () {
+					var e = Object(Pe.c)(),
+						t = e.library,
+						n = e.chainId,
+						a = Object(Xe.a)(e, qe),
+						i = Object(r.useRef)(t),
+						s = Object(r.useState)(t || Ae),
+						o = Object(Te.a)(s,
+				2),
+						u = o[
+					0
+				],
+						p = o[
+					1
+				];
+					return (
+						Object(r.useEffect)(
+							function () {
+								t !== i.current && (p(t || Ae), (i.current = t));
+				},
+				[t
+				]
+						),
+						Object(T.a)(
+							{
+								library: u,
+								chainId: null !== n && void 0 !== n ? n : G.chainId,
+				},
+							a
+						)
+					);
+			},
+				Ge = n(120),
+				Qe = n(183),
+				Ke = n(113);
+			function Ze(e, t, n, a) {
+				if (!Object(Ke.isAddress)(e) || e === Qe.a)
+					throw Error("Invalid 'address' parameter '".concat(e,
+				"'."));
+				return new Ge.b(
+					e,
+					t,
+					(function (e, t) {
+						return t
+							? (function (e, t) {
+									return e.getSigner(t).connectUnchecked();
+					})(e, t)
+							: e;
+				})(n, a)
+				);
+			}
+			function $e(e, t) {
+				return Ze(G.nft.address, G.nft.abi, e, t);
+			}
+			function et() {
+				return tt($e);
+			}
+			function tt(e) {
+				var t = Je(),
+					n = t.account,
+					a = t.chainId,
+					i = t.library;
+				return (function (e, t) {
+					var n = Object(r.useState)(e),
+						a = Object(Te.a)(n,
+					2),
+						i = a[
+						0
+					],
+						s = a[
+						1
+					];
+					return (
+						Object(r.useEffect)(
+							function () {
+								var n = setTimeout(function () {
+									s(e);
+						}, t);
+								return function () {
+									clearTimeout(n);
+						};
+					},
+					[e, t
+					]
+						),
+						i
+					);
+				})(
+					Object(r.useMemo)(
+						function () {
+							if (!i || !a) return null;
+							var t = e(i, n || void 0);
+							return t || null;
+				},
+				[e, n, a, i
+				]
+					),
+				100
+				);
+			}
+			var nt = function () {
+					return Object(f.c)(function (e) {
+						return e.contractNFT;
+				});
+			},
+				at = function () {
+					return Object(f.c)(function (e) {
+						return e.contractNFT.stateStatus;
+				});
+			},
+				it = function () {
+					return Object(f.c)(function (e) {
+						return e.contractNFT.prefetchStatus;
+				});
+			},
+				st = n(29),
+				rt = [
+				"mintLimit",
+				"mintPrice",
+				"mintActive",
+				"symbol",
+				"name",
+				"totalSupply",
+			],
+				ot = [
+				"whitelist",
+				"addressMinted",
+				"partnerMintAvailableBy",
+				"balanceOf",
+			],
+				ut = function () {
+					var e = Je().account,
+						t = et(),
+						n = at(),
+						a = it(),
+						i = Oe();
+					Object(r.useEffect)(
+						function () {
+							a === I.INITIAL &&
+								t &&
+								(console.log(123),
+								i(
+									(function (e) {
+										return (function () {
+											var t = Object(y.a)(
+												b.a.mark(function t(n) {
+													return b.a.wrap(function (t) {
+														for (;;)
+															switch ((t.prev = t.next)) {
+																case 0:
+																	n(le());
+																	try {
+																		Promise.all(
+																			rt.map(function (t) {
+																				return e[t
+												]();
+											})
+																		)
+																			.then(function (e) {
+																				var t = {
+																					mintLimit: Number(e[
+														0
+													].toString()),
+																					price: e[
+														1
+													].toString(),
+																					mintActive: e[
+														2
+													],
+																					symbol: e[
+														3
+													],
+																					name: e[
+														4
+													],
+																					totalSupply: Number(e[
+														5
+													].toString()),
+												};
+																				console.log(t),
+																					n(
+																						de({
+																							nftData: t,
+												})
+																					);
+											})
+																			.catch(function (e) {
+																				n(
+																					ye({
+																						error: e,
+												})
+																				);
+											});
+										} catch (a) {
+																		console.error(a),
+																			n(
+																				ye({
+																					error: a,
+											})
+																			);
+										}
+																case 2:
+																case "end":
+																	return t.stop();
+									}
+								}, t);
+							})
+											);
+											return function (e) {
+												return t.apply(this, arguments);
+							};
+						})();
+					})(t)
+								));
+				},
+				[a, t, i
+				]
+					),
+						Object(r.useEffect)(
+							function () {
+								e &&
+									n === I.INITIAL &&
+									t &&
+									i(
+										(function (e, t) {
+											return (function () {
+												var n = Object(y.a)(
+													b.a.mark(function n(a) {
+														return b.a.wrap(function (n) {
+															for (;;)
+																switch ((n.prev = n.next)) {
+																	case 0:
+																		a(me());
+																		try {
+																			Promise.all(
+																				[].concat(
+																					Object(st.a)(
+																						ot.map(function (n) {
+																							return e[n
+												](t);
+											})
+																					),
+											[Ae.getBalance(t)
+											]
+																				)
+																			)
+																				.then(function (e) {
+																					var t = {
+																						inWhitelist: e[
+														0
+													],
+																						addressMinted: e[
+														1
+													],
+																						partnerMintAvailableBy: Number(
+																							e[
+														2
+													].toString()
+																						),
+																						balance: Number(e[
+														3
+													].toString()),
+																						networkBalance: e[
+														4
+													].toString(),
+												};
+																					console.log(t),
+																						a(
+																							be({
+																								nftData: t,
+												})
+																						);
+											})
+																				.catch(function (e) {
+																					a(
+																						fe({
+																							error: e,
+												})
+																					);
+											});
+										} catch (i) {
+																			console.error(i),
+																				a(
+																					fe({
+																						error: i,
+											})
+																				);
+										}
+																	case 2:
+																	case "end":
+																		return n.stop();
+									}
+								}, n);
+							})
+												);
+												return function (e) {
+													return n.apply(this, arguments);
+							};
+						})();
+					})(t, e)
+									);
+				},
+				[e, n, t, i
+				]
+						);
+			},
+				pt = n(86),
+				ct = n(337),
+				lt = n(330),
+				dt = n(336),
+				yt = n(296),
+				mt = n(331),
+				bt = function (e) {
+					var t = e.msg,
+						n = e.id;
+					Le.b.info(t,
+				{
+						toastId: null !== n && void 0 !== n ? n : 1,
+						style: {
+							backgroundColor: "gold",
+					},
+						icon: !1,
+						position: "bottom-center",
+						progressStyle: {
+							backgroundColor: "white",
+					},
+				});
+			},
+				ft = n.p + "static/media/twitter.774040bc.svg",
+				jt = n.p + "static/media/instagram.a540ab2c.svg",
+				xt = n.p + "static/media/opensea.2def7df7.svg",
+				ht = n.p + "static/media/etherscan.e1950e92.svg",
+				Ot = n.p + "static/media/discord.adebb458.svg",
+				gt = n(16),
+				Tt = n(104),
+				vt = n(335),
+				wt = Object(gt.a)(vt.a)(function (e) {
+					var t = e.theme;
+					return {
+						display: "flex",
+						textDecoration: "none",
+						fontSize: t.typography.pxToRem(16),
+						fontWeight: 600,
+						marginRight: t.spacing(1),
+						marginLeft: t.spacing(1),
+						color: "dark" === t.palette.mode
+								? t.palette.common.white
+								: t.palette.common.black,
+					"&:hover": {
+							color: "dark" === t.palette.mode
+									? t.palette.primary.light
+									: t.palette.primary.main,
+					},
+				};
+			}),
+				kt = Object(gt.a)(Tt.a)(function (e) {
+					var t = e.theme;
+					return {
+						display: "flex",
+						textDecoration: "none",
+						fontSize: t.typography.pxToRem(16),
+						fontWeight: 600,
+						marginRight: t.spacing(1),
+						marginLeft: t.spacing(1),
+						color: t.palette.primary.main,
+					"&:hover": {
+							color: t.palette.primary.light,
+					},
+				};
+			}),
+				Mt = n(2),
+				St = [
+				{
+						path: "https://discord.gg/HYPEBEARS",
+						icon: Ot,
+				},
+				{
+						path: "https://twitter.com/hypebearsclub",
+						icon: ft,
+				},
+				{
+						path: "https://etherscan.com",
+						icon: ht,
+				},
+				{
+						path: "https://opensea.io/",
+						icon: xt,
+				},
+				{
+						path: "https://instagram.com/hypebearsclub",
+						icon: jt,
+				},
+			],
+				At = function (e) {
+					var t = e.sx,
+						n = e.multi,
+						a = Object(pt.a)();
+					return Object(Mt.jsx)(dt.a,
+				{
+						sx: {
+							display: "flex",
+							flexWrap: n ? "wrap": "nowrap",
+					},
+						children: St.map(function (e) {
+							return Object(Mt.jsx)(
+								wt,
+						{
+									href: e.path,
+									target: "_blank",
+									sx: Object(T.a)(
+										{
+											width: 36,
+											height: 36,
+											backgroundColor: a.palette.grey.A700,
+											borderRadius: "4px",
+											display: "flex",
+											justifyContent: "center",
+											alignItems: "center",
+											transition: ".2s",
+								"&:hover": {
+												backgroundColor: "transparent",
+								},
+							},
+										t
+									),
+									children: Object(Mt.jsx)("img",
+							{
+										src: e.icon,
+										alt: e.path.split("//")[
+									1
+								][
+									0
+								],
+							}),
+						},
+								e.path
+							);
+					}),
+				});
+			},
+				Et = 16438176e5,
+				Ct = function () {
+					var e,
+						t,
+						n,
+						a = Object(pt.a)(),
+						i = Object(c.g)();
+					return Object(Mt.jsx)(ct.a,
+				{
+						sx: {
+							height: "auto",
+					},
+						children: Object(Mt.jsxs)(lt.a,
+					{
+							container: !0,
+							sx: {
+								minHeight: "100vh",
+								display: "flex",
+								justifyContent: "center",
+								alignItems: "center",
+								alignContent: "center",
+								pb: 20,
+						},
+							children: [
+								Object(Mt.jsx)(lt.a,
+							{
+									item: !0,
+									xs: 12,
+									sx: Object(k.a)(
+										{
+											mt: 10,
+											height: "60%",
+											display: "flex",
+											justifyContent: "center",
+								},
+										a.breakpoints.down("md"),
+								{
+											mt: 0,
+								}
+									),
+									children: Object(Mt.jsx)(dt.a,
+								{
+										sx:
+											((e = {
+												maxHeight: "50vh",
+												width: "100%",
+												height: "100vh",
+												display: "flex",
+												alignContent: "center",
+												justifyContent: "center",
+												alignItems: "flex-start",
+												overflow: "hidden",
+									}),
+											Object(k.a)(e, a.breakpoints.down("md"),
+									{
+												maxHeight: "40vh",
+									}),
+											Object(k.a)(e, a.breakpoints.down("sm"),
+									{
+												maxHeight: "40vh",
+									}),
+											e),
+										children: Object(Mt.jsx)(yt.a,
+									{
+											component: "img",
+											src: "/images/banner.png",
+											sx:
+												((t = {
+													display: "flex",
+													width: "100%",
+													height: "auto",
+										}),
+												Object(k.a)(t, a.breakpoints.down("md"),
+										{
+													width: "100%",
+										}),
+												Object(k.a)(t, a.breakpoints.down("sm"),
+										{
+													width: "170%",
+										}),
+												t),
+									}),
+								}),
+							}),
+								Object(Mt.jsx)(lt.a,
+							{
+									item: !0,
+									xs: 12,
+									sx: {
+										display: "flex",
+										justifyContent: "center",
+								},
+									children: Object(Mt.jsx)(yt.a,
+								{
+										component: "img",
+										src: "/images/banner-text.png",
+										sx: {
+											width: "80%",
+									},
+								}),
+							}),
+								Object(Mt.jsx)(lt.a,
+							{
+									item: !0,
+									xs: 12,
+									sx:
+										((n = {}),
+										Object(k.a)(n, a.breakpoints.up("md"),
+								{
+											display: "none",
+											backgroundColor: "red",
+								}),
+										Object(k.a)(n,
+								"paddingY",
+								3),
+										Object(k.a)(n,
+								"display",
+								"flex"),
+										Object(k.a)(n,
+								"justifyContent",
+								"center"),
+										Object(k.a)(n,
+								"mt",
+								4),
+										Object(k.a)(n, a.breakpoints.down("md"),
+								{
+											mt: 2,
+								}),
+										n),
+									children: Object(Mt.jsx)(At,
+								{}),
+							}),
+								Object(Mt.jsx)(lt.a,
+							{
+									item: !0,
+									xs: 12,
+									sx: {
+										display: "flex",
+										justifyContent: "center",
+								},
+									children: Object(Mt.jsx)(mt.a,
+								{
+										variant: "outlined",
+										onClick: function () {
+											new Date().getTime() > Et
+												? i.push("/mint")
+												: bt({
+														msg: "Not started. Mint will start at "
+															.concat(new Date(Et).toLocaleTimeString(),
+											" of ")
+															.concat(new Date(Et).toLocaleDateString()),
+										});
+									},
+										sx: Object(k.a)(
+											{
+												height: "80px",
+												borderRadius: "0",
+												paddingX: 5,
+												border: "4px solid white",
+												fontSize: "16px",
+												fontWeight: 700,
+												mt: 5,
+										"&:hover": {
+													color: "gold",
+													boxShadow: "inset 0 0 0 4px gold",
+													border: "4px solid gold",
+										},
+									},
+											a.breakpoints.down("md"),
+									{
+												mt: 2,
+									}
+										),
+										children: "MINT A HYPEBEAR",
+								}),
+							}),
+						],
+					}),
+				});
+			},
+				It = function () {
+					var e,
+						t,
+						n = Object(pt.a)();
+					return Object(Mt.jsx)(dt.a,
+				{
+						sx: {
+							display: "flex",
+							justifyContent: "center",
+					},
+						children: Object(Mt.jsx)(dt.a,
+					{
+							sx:
+								((e = {
+									width: "100%",
+									maxWidth: 1500,
+									display: "flex",
+									height: 595,
+									backgroundImage: 'url("/images/classic.png")',
+									backgroundRepeat: "no-repeat",
+									backgroundSize: "50%",
+									backgroundPosition: "right -100px bottom 0",
+						}),
+								Object(k.a)(e, n.breakpoints.up("lg"),
+						{
+									backgroundSize: "35%",
+									backgroundPosition: "right bottom",
+						}),
+								Object(k.a)(e, n.breakpoints.down("md"),
+						{
+									backgroundImage: "none",
+									height: "auto",
+									paddingX: 1,
+						}),
+								e),
+							children: Object(Mt.jsx)(ct.a,
+						{
+								sx: {
+									display: "flex",
+									alignItems: "flex-end",
+							},
+								children: Object(Mt.jsxs)(lt.a,
+							{
+									container: !0,
+									sx: {
+										display: "flex",
+										alignItems: "flex-end",
+								},
+									children: [
+										Object(Mt.jsxs)(lt.a,
+									{
+											item: !0,
+											xs: 12,
+											sx: {
+												letterSpacing: "-0.085rem",
+										},
+											children: [
+												Object(Mt.jsxs)(yt.a,
+											{
+													sx:
+														((t = {
+															fontSize: "56px",
+															justifyContent: "center",
+															textAlign: "left",
+															lineHeight: "52px",
+												}),
+														Object(k.a)(t, n.breakpoints.down("xl"),
+												{
+															fontSize: n.typography.pxToRem(42),
+															lineHeight: "40px",
+												}),
+														Object(k.a)(t, n.breakpoints.down("md"),
+												{
+															pt: 10,
+															pb: 5,
+															textAlign: "center",
+															fontSize: n.typography.pxToRem(36),
+															lineHeight: "34px",
+												}),
+														Object(k.a)(t, n.breakpoints.down("sm"),
+												{
+															pt: 7,
+															pb: 1,
+															fontSize: n.typography.pxToRem(24),
+												}),
+														t),
+													children: [
+													"A CLASSIC ",
+														Object(Mt.jsx)("strong",
+													{
+															children: "10,000 COLLECTION",
+													}),
+													" ",
+														Object(Mt.jsx)("br",
+													{}),
+													"BY",
+														Object(Mt.jsx)(vt.a,
+													{
+															href: "https://twitter.com/jpegenthusiast_",
+															target: "_blank",
+															sx: {
+																textDecoration: "none",
+																fontWeight: 700,
+														},
+															children: "@JPEGENTHUSIAST_",
+													}),
+												],
+											}),
+												Object(Mt.jsx)(yt.a,
+											{
+													sx: Object(k.a)(
+														{
+															color: "silver",
+															pb: 10,
+															lineHeight: "104px",
+												},
+														n.breakpoints.down("md"),
+												{
+															pb: 5,
+															textAlign: "center",
+												}
+													),
+													children: "Own a #HYPEBEARS to join the Exclusive Club.",
+											}),
+										],
+									}),
+										Object(Mt.jsx)(lt.a,
+									{
+											item: !0,
+											xs: 12,
+											sx: Object(k.a)(
+												{
+													display: "flex",
+													justifyContent: "center",
+										},
+												n.breakpoints.up("md"),
+										{
+													display: "none",
+										}
+											),
+											children: Object(Mt.jsx)(yt.a,
+										{
+												sx: {
+													width: "90%",
+													maxWidth: 500,
+													minWidth: 300,
+											},
+												component: "img",
+												src: "/images/classic.png",
+										}),
+									}),
+								],
+							}),
+						}),
+					}),
+				});
+			},
+				Rt = function () {
+					var e,
+						t,
+						n = Object(pt.a)();
+					return Object(Mt.jsx)(dt.a,
+				{
+						id: "#release-date",
+						sx: {
+							display: "flex",
+							justifyContent: "center",
+					},
+						children: Object(Mt.jsx)(dt.a,
+					{
+							sx:
+								((e = {
+									width: "100%",
+									height: "250px",
+									display: "flex",
+									backgroundImage: 'url("/images/release.png")',
+									backgroundSize: "100%",
+									backgroundPosition: "center",
+						}),
+								Object(k.a)(e, n.breakpoints.down("md"),
+						{
+									height: 450,
+									backgroundImage: 'url("/images/release-mob.png")',
+									backgroundSize: "cover",
+						}),
+								Object(k.a)(e, n.breakpoints.down("sm"),
+						{
+									height: 450,
+						}),
+								e),
+							children: Object(Mt.jsxs)(lt.a,
+						{
+								container: !0,
+								mt: 8,
+								sx:
+									((t = {
+										display: "block",
+										textAlign: "center",
+							}),
+									Object(k.a)(t, n.breakpoints.down("md"),
+							{
+										mt: 10,
+							}),
+									Object(k.a)(t, n.breakpoints.down("md"),
+							{
+										mt: 21,
+							}),
+									t),
+								children: [
+									Object(Mt.jsx)(yt.a,
+								{
+										sx: {
+											fontSize: "18px",
+											letterSpacing: "0.335rem",
+									},
+										children: "HYPEBEARS RELEASE ON",
+								}),
+									Object(Mt.jsx)(yt.a,
+								{
+										sx: Object(k.a)(
+											{
+												fontSize: "72px",
+												fontWeight: "bold",
+									},
+											n.breakpoints.down("sm"),
+									{
+												fontSize: "48px",
+									}
+										),
+										children: "2/2/2022",
+								}),
+							],
+						}),
+					}),
+				});
+			},
+				Dt = function () {
+					var e,
+						t = Object(pt.a)();
+					return Object(Mt.jsx)(ct.a,
+				{
+						children: Object(Mt.jsx)(lt.a,
+					{
+							container: !0,
+							children: Object(Mt.jsx)(lt.a,
+						{
+								item: !0,
+								mt: 8,
+								xs: 12,
+								sx:
+									((e = {
+										height: "100px",
+										display: "flex",
+										justifyContent: "center",
+										textAlign: "center",
+							}),
+									Object(k.a)(e, t.breakpoints.down("md"),
+							{
+										mt: 9,
+							}),
+									Object(k.a)(e, t.breakpoints.down("md"),
+							{
+										mt: 9,
+							}),
+									e),
+								children: Object(Mt.jsx)(yt.a,
+							{
+									sx: {
+										fontSize: "18px",
+										letterSpacing: "-0.05rem",
+								},
+									children: "\xa9 2022 HYPEBEARS.",
+							}),
+						}),
+					}),
+				});
+			},
+				Bt = [
+				"banana",
+				"card",
+				"eth",
+				"shield"
+			],
+				Nt = function () {
+					return Object(Mt.jsx)(dt.a,
+				{
+						sx: {
+							width: "100%",
+							display: "flex",
+							justifyContent: "center",
+							backgroundColor: function (e) {
+								return e.palette.common.white;
+						},
+					},
+						children: Object(Mt.jsx)(dt.a,
+					{
+							sx: {
+								width: "100%",
+								backgroundColor: "red",
+								display: "flex",
+								flexDirection: "row",
+								flexWrap: "nowrap",
+						},
+							children: Bt.map(function (e) {
+								return Object(Mt.jsx)(
+									dt.a,
+							{
+										sx: {
+											width: "25%",
+											backgroundColor: "blue",
+											display: "flex",
+								},
+										children: Object(Mt.jsx)(yt.a,
+								{
+											component: "img",
+											src: "/images/bears-gif/".concat(e,
+									"-big.webp"),
+											sx: {
+												height: "auto",
+												width: "100%",
+									},
+								}),
+							},
+									e
+								);
+						}),
+					}),
+				});
+			},
+				Ft = n(338),
+				Pt = n(340),
+				Lt = [
+				{
+						title: "HYPEBEARS",
+						body: "Social Club",
+						img: "1.png",
+				},
+				{
+						title: "HYPEBank",
+						body: "($HYPEB)",
+						img: "2.png",
+				},
+				{
+						title: "HYPEBEARS",
+						body: "Staking UI",
+						img: "3.png",
+				},
+				{
+						title: "HYPEBEARS",
+						body: "PFP Mint",
+						img: "4.png",
+				},
+				{
+						title: "HYPEBEARS",
+						body: "Merchandise",
+						img: "5.png",
+				},
+			],
+				_t = function () {
+					var e = Object(pt.a)();
+					return Object(Mt.jsxs)(dt.a,
+				{
+						id: "#roadmap",
+						sx: {
+							width: "100%",
+							backgroundColor: e.palette.common.white,
+							backgroundImage: 'url("/images/roadmap/lines.png")',
+							backgroundSize: "cover",
+							backgroundRepeat: "no-repeat",
+					},
+						children: [
+							Object(Mt.jsx)(ct.a,
+						{
+								children: Object(Mt.jsx)(lt.a,
+							{
+									container: !0,
+									children: Object(Mt.jsx)(lt.a,
+								{
+										item: !0,
+										xs: 12,
+										sx: {
+											width: "100%",
+									},
+										children: Object(Mt.jsx)(yt.a,
+									{
+											sx: {
+												color: "#000",
+												fontSize: "64px",
+												fontWeight: "bold",
+												display: "flex",
+												justifyContent: "center",
+												mt: 5,
+										},
+											children: "ROADMAP",
+									}),
+								}),
+							}),
+						}),
+							Object(Mt.jsx)(ct.a,
+						{
+								children: Object(Mt.jsx)(lt.a,
+							{
+									container: !0,
+									columns: 15,
+									spacing: 2,
+									sx: {
+										marginY: 5,
+										display: "flex",
+										justifyContent: "center",
+								},
+									children: Lt.map(function (e, t) {
+										return Object(Mt.jsx)(
+											lt.a,
+									{
+												item: !0,
+												xs: 12,
+												sm: 5,
+												md: 3,
+												sx: {
+													display: "flex",
+													justifyContent: "center",
+										},
+												children: Object(Mt.jsx)(Ft.a,
+										{
+													elevation: 0,
+													sx: {
+														background: "rgba(0, 0, 0, 0.02)",
+														maxWidth: 350,
+														width: "100%",
+											},
+													children: Object(Mt.jsxs)(Pt.a,
+											{
+														sx: {
+															color: "#000",
+															display: "flex",
+															justifyContent: "center",
+															alignItems: "center",
+															flexDirection: "column",
+															paddingY: 5,
+															paddingX: 2.5,
+												},
+														children: [
+															Object(Mt.jsx)(dt.a,
+													{
+																sx: {
+																	width: "100%",
+																	display: "flex",
+																	justifyContent: "flex-end",
+																	fontWeight: 900,
+																	fontSize: "1.5rem",
+																	fontFamily: "Poppins",
+														},
+																children: ""
+																	.concat(t + 1,
+														"/")
+																	.concat(Lt.length),
+													}),
+															Object(Mt.jsx)(yt.a,
+													{
+																component: "img",
+																src: "/images/roadmap/".concat(e.img),
+																sx: {
+																	width: "100%",
+														},
+													}),
+															Object(Mt.jsx)(yt.a,
+													{
+																sx: {
+																	fontWeight: "bold",
+														},
+																children: e.title,
+													}),
+															Object(Mt.jsx)(yt.a,
+													{
+																children: e.body,
+													}),
+												],
+											}),
+										}),
+									},
+									"".concat(e.title,
+									"-").concat(e.img)
+										);
+								}),
+							}),
+						}),
+					],
+				});
+			},
+				Ht = (n(187), n(341)),
+				Wt = function (e) {
+					var t = e.name,
+						n = e.place,
+						a = e.link,
+						i = e.index,
+						s = Object(pt.a)();
+					return Object(Mt.jsxs)(Ft.a,
+				{
+						elevation: 0,
+						sx: {
+							maxWidth: 270,
+							maxHeight: 351,
+					},
+						children: [
+							Object(Mt.jsx)(Ht.a,
+						{
+								component: "img",
+								height: "270",
+								image: "/images/team/".concat(i,
+							".png"),
+								alt: "test",
+						}),
+							Object(Mt.jsxs)(Pt.a,
+						{
+								sx: {
+									backgroundColor: "white",
+									color: "black",
+									display: "flex",
+									justifyContent: "space-between",
+									alignItems: "center",
+							},
+								children: [
+									Object(Mt.jsxs)(dt.a,
+								{
+										sx: {
+											textAlign: "left",
+									},
+										children: [
+											Object(Mt.jsx)(yt.a,
+										{
+												sx: {
+													textTransform: "uppercase",
+													fontSize: 16,
+													fontWeight: 700,
+											},
+												children: t,
+										}),
+											Object(Mt.jsx)(yt.a,
+										{
+												sx: {
+													textTransform: "uppercase",
+											},
+												children: n,
+										}),
+									],
+								}),
+									Object(Mt.jsx)(wt,
+								{
+										sx: {
+											width: 36,
+											height: 36,
+											backgroundColor: s.palette.common.black,
+											borderRadius: "4px",
+											display: "flex",
+											justifyContent: "center",
+											alignItems: "center",
+											transition: ".2s",
+										"&:hover": {
+												backgroundColor: s.palette.grey.A400,
+										},
+									},
+										href: a,
+										target: "_blank",
+										children: Object(Mt.jsx)("img",
+									{
+											src: ft,
+											alt: "",
+									}),
+								}),
+							],
+						}),
+					],
+				});
+			},
+				Ut = [
+				{
+						name: "jpegenthusiast.eth",
+						place: "HYPEBEARS",
+						link: "https://twitter.com/jpegenthusiast_",
+				},
+				{
+						name: "ArT",
+						place: "HYPEBEARS",
+						link: "https://twitter.com/therickk",
+				},
+				{
+						name: "XYSquare",
+						place: "HYPEBEARS",
+						link: "https://twitter.com/xy_square",
+				},
+				{
+						name: "Yura",
+						place: "HYPEBEARS",
+						link: "https://twitter.com/yura_elkin",
+				},
+			],
+				Yt = function () {
+					return Object(Mt.jsxs)(dt.a,
+				{
+						id: "#team",
+						className: "team",
+						sx: {
+							backgroundImage: "url('/images/team/team-bg.png')",
+							backgroundSize: "cover",
+							backgroundRepeat: "no-repeat",
+							backgroundPosition: "-400px",
+					},
+						children: [
+							Object(Mt.jsx)("div",
+						{
+								className: "title_team",
+								children: Object(Mt.jsxs)("h4",
+							{
+									children: [
+									"MEET THE ",
+										Object(Mt.jsx)("br",
+									{}),
+									" HYPEBEARS TEAM",
+								],
+							}),
+						}),
+							Object(Mt.jsx)(dt.a,
+						{
+								sx: {
+									mt: "5rem",
+									width: "100%",
+									display: "flex",
+									justifyContent: "center",
+							},
+								children: Object(Mt.jsx)(dt.a,
+							{
+									sx: {
+										display: "flex",
+										overflowX: "scroll",
+									"&::-webkit-scrollbar": {
+											display: "none",
+									},
+								},
+									children: Ut.map(function (e, t) {
+										return Object(Mt.jsx)(
+											dt.a,
+									{
+												sx: {
+													minWidth: "270px",
+													marginX: 2,
+										},
+												children: Object(Mt.jsx)(Wt,
+										{
+													link: e.link,
+													name: e.name,
+													place: e.place,
+													index: t,
+										}),
+									},
+											e.name
+										);
+								}),
+							}),
+						}),
+					],
+				});
+			};
+			function Vt() {
+				return Object(Mt.jsxs)(Mt.Fragment,
+				{
+					children: [
+						Object(Mt.jsx)(Ct,
+						{}),
+						Object(Mt.jsx)(Nt,
+						{}),
+						Object(Mt.jsx)(It,
+						{}),
+						Object(Mt.jsx)(_t,
+						{}),
+						Object(Mt.jsx)(Rt,
+						{}),
+						Object(Mt.jsx)(Yt,
+						{}),
+						Object(Mt.jsx)(Dt,
+						{}),
+					],
+				});
+			}
+			function zt() {
+				return Object(Mt.jsx)(Mt.Fragment,
+				{
+					children: "Private Sale",
+				});
+			}
+			var Xt,
+				qt,
+				Jt = n(324),
+				Gt = n(325),
+				Qt = n(349),
+				Kt = n(350),
+				Zt = n(343),
+				$t = n(351),
+				en = n(216),
+				tn = n.n(en),
+				nn = n(137),
+				an = n.n(nn),
+				sn = n(217),
+				rn = n.n(sn),
+				on = n(141),
+				un = n(319),
+				pn = n(342),
+				cn = n(323),
+				ln = n(344),
+				dn = n(345),
+				yn = n(346),
+				mn = n(347),
+				bn = n(333),
+				fn = n(348),
+				jn = Object(gt.a)("div")({
+					display: "flex",
+					alignItems: "center",
+					justifyContent: "space-between",
+			});
+			function xn(e) {
+				var t = e.text,
+					n = e.sx,
+					a = o.a.useState(!1),
+					i = Object(Te.a)(a,
+				2),
+					s = i[
+					0
+				],
+					u = i[
+					1
+				],
+					p = Object(pt.a)(),
+					c = Object(un.a)(p.breakpoints.down("sm")),
+					l = Ve(),
+					d = l.login,
+					y = l.logout,
+					m = Object(Pe.c)().account;
+				Object(r.useEffect)(
+					function () {
+						m && s && b();
+				},
+				[m, s
+				]
+				);
+				var b = function () {
+					u(!1);
+				};
+				return Object(Mt.jsxs)(Mt.Fragment,
+				{
+					children: [
+						Object(Mt.jsx)(mt.a,
+						{
+							sx: Object(T.a)({}, n),
+							size: "large",
+							onClick: function () {
+								m ? y() : u(!0);
+							},
+							children: m ? "Disconnect": t || "Connect",
+						}),
+						Object(Mt.jsxs)(pn.a,
+						{
+							fullScreen: c,
+							open: s,
+							onClose: b,
+							"aria-labelledby": "responsive-dialog-title",
+							sx: {
+								"& .MuiPaper-root": {
+									backgroundColor: "black",
+									backgroundImage: "linear-gradient(35deg, rgba(255, 233, 2, 0.26), rgba(255,255,255,0.1), rgba(255, 100, 100, 0.05))",
+								},
+							},
+							children: [
+								Object(Mt.jsx)(cn.a,
+								{
+									id: "responsive-dialog-title",
+									children: Object(Mt.jsxs)(jn,
+									{
+										children: [
+											Object(Mt.jsx)("div",
+											{
+												children: "Connect your wallet",
+											}),
+											Object(Mt.jsx)(Zt.a,
+											{
+												onClick: b,
+												children: Object(Mt.jsx)(an.a,
+												{}),
+											}),
+										],
+									}),
+								}),
+								Object(Mt.jsx)(ln.a,
+								{
+									sx: {
+										display: "flex",
+										alignItems: "center",
+										justifyContent: "center",
+									},
+									children: Object(Mt.jsx)(dn.a,
+									{
+										sx: {
+											width: "100%",
+											maxWidth: 360,
+											display: "flex",
+											flexDirection: "column",
+										},
+										children: Re.map(function (e) {
+											var t = Ne[e
+											];
+											return Object(Mt.jsx)(
+												o.a.Fragment,
+											{
+													children: Object(Mt.jsxs)(yn.a,
+												{
+														alignItems: "center",
+														onClick: function () {
+															return d(e);
+													},
+														sx: {
+															borderRadius: 1,
+													},
+														children: [
+															Object(Mt.jsx)(mn.a,
+														{
+																children: Object(Mt.jsx)(bn.a,
+															{
+																	sx: {},
+																	alt: t.name,
+																	src: "/images/wallets/".concat(t.iconName),
+															}),
+														}),
+															Object(Mt.jsx)(fn.a,
+														{
+																primary: t.name,
+																secondary: t.description,
+														}),
+													],
+												}),
+											},
+												e
+											);
+										}),
+									}),
+								}),
+							],
+						}),
+					],
+				});
+			}
+			!(function (e) {
+				(e.mint = "mint"),
+					(e.releaseDate = "releaseDate"),
+					(e.roadmap = "roadmap"),
+					(e.team = "team");
+			})(qt || (qt = {}));
+			var hn =
+					((Xt = {}),
+					Object(k.a)(Xt, qt.mint,
+			{
+						path: "/mint",
+						title: "Mint",
+			}),
+					Object(k.a)(Xt, qt.releaseDate,
+			{
+						path: "#release-date",
+						title: "Release Date",
+			}),
+					Object(k.a)(Xt, qt.roadmap,
+			{
+						path: "#roadmap",
+						title: "Roadmap",
+			}),
+					Object(k.a)(Xt, qt.team,
+			{
+						path: "#team",
+						title: "The Team",
+			}),
+					Xt),
+				On = [qt.mint
+			],
+				gn = [qt.roadmap, qt.releaseDate, qt.team
+			];
+			function Tn(e) {
+				var t = e.children,
+					n = e.window,
+					a = Object(Jt.a)({
+						target: n ? n() : void 0,
+				});
+				return Object(Mt.jsx)(Gt.a,
+				{
+					appear: !1,
+					direction: "down",
+					in: !a,
+					children: t,
+				});
+			}
+			function vn(e) {
+				var t,
+					n = e.children,
+					a = Object(pt.a)(),
+					i = Object(Pe.c)().account,
+					s = Ve().logout,
+					o = Object(c.g)(),
+					u = Object(r.useState)(!1),
+					p = Object(Te.a)(u,
+				2),
+					l = p[
+					0
+				],
+					d = p[
+					1
+				],
+					y = new Date().getTime(),
+					m = function (e) {
+						return function (t) {
+							("keydown" !== t.type ||
+								("Tab" !== t.key && "Shift" !== t.key)) &&
+								d(e);
+					};
+				},
+					b = function () {
+						m(!1),
+							y < Et &&
+								(bt({
+									msg: "Not started. Mint will start at "
+										.concat(new Date(Et).toLocaleTimeString(),
+						" of ")
+										.concat(new Date(Et).toLocaleDateString()),
+					}),
+								on.animateScroll.scrollToTop());
+				};
+				return Object(Mt.jsxs)(Mt.Fragment,
+				{
+					children: [
+						Object(Mt.jsx)(
+							Tn,
+							Object(T.a)(
+								Object(T.a)({}, e),
+						{},
+						{
+									children: Object(Mt.jsx)(Qt.a,
+							{
+										children: Object(Mt.jsx)(Kt.a,
+								{
+											children: Object(Mt.jsx)(ct.a,
+									{
+												children: Object(Mt.jsx)(lt.a,
+										{
+													container: !0,
+													children: Object(Mt.jsxs)(lt.a,
+											{
+														item: !0,
+														xs: 12,
+														sx: Object(k.a)(
+															{
+																display: "flex",
+																justifyContent: "space-between",
+																alignItems: "center",
+												},
+															a.breakpoints.down("sm"),
+												{
+																flexDirection: "row-reverse",
+												}
+														),
+														children: [
+															Object(Mt.jsx)(dt.a,
+													{
+																display: "flex",
+																sx: Object(k.a)(
+																	{
+																		width: "40%",
+																		justifyContent: "flex-start",
+														},
+																	a.breakpoints.down("sm"),
+														{
+																		width: "100%",
+																		justifyContent: "flex-end",
+														}
+																),
+																children: Object(Mt.jsx)(kt,
+														{
+																	to: "/",
+																	sx: {
+																		width: 30,
+																		height: 30,
+															},
+																	children: Object(Mt.jsx)(yt.a,
+															{
+																		component: "img",
+																		src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAlCAYAAAAqXEs9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKuSURBVHgBzVjtceIwEF177v+5g1MH51RwvgqgA+ggXAVxB3AVABWEVGCnArgK5KsAUoGyG1bYyJIseSaBN7MjS6xWz2I/JCeAUEoV2DyhUEs4oKySJNmCAzgnwyZHEcZPDQnObTzzFigTFHo+obzweidSyJUbEkV0jBUoax4fwhHlGWXWmT/ncRsqrVQNGJYopcdQCGTAOoRJQgvx1t0DVincGYjQAe4HByK0hftAg/KaYqht8KGG22NzSRXo2EKFhfJnYd2jx6QqzyQz7PfKngqOFju+lLF07hmTcoESqOyQ6fbNxcnOhvuS+y5Sv8YSWvLvlH0zbl2o2J6eU3p0RxMiFKxXqmEsA21eETIT4wncOECbs3x6V7Y4cnyp5Q18UHa/IJ/J+G1nrLf0vPWadaiY5vy8sehJGIJjoVxdpwbqT5UbE9U6suTnzKL3HELIttCeZSyksqeUmbl+YiFElf8IX4MH9LGrWnrrat978W8WpSmEo0bZQRt1As7H2lAbpPfXq6HCa9qjx8Y80IZkF7kgNQyV0D+0u9B4fgs9YwkUey1DMgsVB6k6F4COHQrx2Ihc6PmJNoLNHsadrWk3tA/pq9EYfEScJkQZU8Bt0aA8pEhmDvFkupEF/NwYOjXEQaDMyKknEI8/0F98ZYyVEE9qmkL87mif6fob9c2qLUYQylOId+QaHPd56BN6hThkKfjziQ07sO9qY/QFRk0NYWcnjVH3sn8oPyzj5sI6/GMuoit9LwslVX98MrHkGh7vkhLc7iAM9Alnq0vHIpAUHcwKaL8jXRY3axIi4wxcwDBoF3/3RtW5KEo1DmM+19Ccp0G6TKxSn4cK5VH1d7V/YjSICWx+8rbnLLFpQmfxGs5/zQv7mxVeQg6SREigfIfWcXXbdEj8h7OjxoQ9vAN06qYvHoF7IQAAAABJRU5ErkJggg==",
+																		width: "100%",
+																		height: "100%",
+															}),
+														}),
+													}),
+															Object(Mt.jsx)(yt.a,
+													{
+																component: "div",
+																sx:
+																	((t = {
+																		display: "flex",
+																		alignItems: "center",
+																		justifyContent: "center",
+																		width: "100%",
+														}),
+																	Object(k.a)(t, a.breakpoints.down("sm"),
+														{
+																		display: "none",
+														}),
+																	Object(k.a)(t, a.breakpoints.down("md"),
+														{
+																		justifyContent: "flex-end",
+														}),
+																	t),
+																children: Object(Mt.jsx)(yt.a,
+														{
+																	component: "div",
+																	sx: {
+																		display: "flex",
+																		alignItems: "center",
+																		justifyContent: "center",
+															},
+																	children: Object(Mt.jsxs)(dt.a,
+															{
+																		sx: {
+																			display: "flex",
+																},
+																		children: [
+																			On.map(function (e) {
+																				var t = hn[e
+																		];
+																				return Object(Mt.jsx)(
+																					kt,
+																		{
+																						onClick: function () {
+																							return b();
+																			},
+																						to: "/mint" === t.path
+																								? y > Et
+																									? "/mint": "": t.path,
+																						children: t.title,
+																		},
+																					e
+																				);
+																	}),
+																			gn.map(function (e) {
+																				var t = hn[e
+																		];
+																				return Object(Mt.jsx)(
+																					yt.a,
+																		{
+																						sx: {
+																				"& a.active-scroll-link": {
+																								color: "gold",
+																				},
+																							cursor: "pointer",
+																							marginRight: 1,
+																							marginLeft: 1,
+																							fontWeight: 600,
+																			},
+																						children: Object(Mt.jsx)(
+																							on.Link,
+																			{
+																								to: t.path,
+																								activeClass: "active-scroll-link",
+																								spy: !0,
+																								smooth: !0,
+																								duration: 500,
+																								children: t.title,
+																			},
+																							e
+																						),
+																		},
+																					e
+																				);
+																	}),
+																],
+															}),
+														}),
+													}),
+															Object(Mt.jsx)(dt.a,
+													{
+																sx: Object(k.a)({}, a.breakpoints.down("md"),
+														{
+																	display: "none",
+														}),
+																children: Object(Mt.jsx)(At,
+														{}),
+													}),
+															Object(Mt.jsx)(yt.a,
+													{
+																component: "div",
+																sx: Object(k.a)(
+																	{
+																		display: "flex",
+																		alignItems: "center",
+																		justifyContent: "flex-end",
+														},
+																	a.breakpoints.up("sm"),
+														{
+																		display: "none",
+														}
+																),
+																children: Object(Mt.jsx)(Zt.a,
+														{
+															"aria-label": "open menu",
+																	onClick: m(!0),
+																	children: Object(Mt.jsx)(tn.a,
+															{}),
+														}),
+													}),
+												],
+											}),
+										}),
+									}),
+								}),
+							}),
+						}
+							)
+						),
+						Object(Mt.jsxs)($t.a,
+						{
+							anchor: "left",
+							open: l,
+							onClose: m(!1),
+							sx: {
+								"& .MuiPaper-root": {
+									minWidth: "20%",
+									maxWidth: "70%",
+								},
+							},
+							children: [
+								Object(Mt.jsx)(dt.a,
+								{
+									sx: {
+										position: "absolute",
+										right: 0,
+										top: 0,
+									},
+									children: Object(Mt.jsx)(Zt.a,
+									{
+										"aria-label": "open menu",
+										onClick: m(!1),
+										children: Object(Mt.jsx)(an.a,
+										{}),
+									}),
+								}),
+								Object(Mt.jsxs)(dt.a,
+								{
+									sx: {
+										display: "flex",
+										justifyContent: "space-between",
+										flexDirection: "column",
+										alignItems: "flex-start",
+										p: 5,
+										height: "100%",
+										backgroundColor: "#2b2b2b",
+									},
+									children: [
+										Object(Mt.jsxs)(dt.a,
+										{
+											sx: {
+												pb: 5,
+											},
+											children: [
+												On.map(function (e) {
+													var t = hn[e
+													];
+													return Object(Mt.jsx)(
+														dt.a,
+													{
+															sx: {
+																mb: 3,
+														},
+															children: Object(Mt.jsx)(kt,
+														{
+																onClick: function () {
+																	return "/mint" === t.path ? b() : m(!1);
+															},
+																to: "/mint" === t.path
+																		? y > Et
+																			? "/mint": "": t.path,
+																children: t.title,
+														}),
+													},
+														e
+													);
+												}),
+												gn.map(function (e) {
+													var t = hn[e
+													];
+													return Object(Mt.jsx)(
+														yt.a,
+													{
+															sx: {
+															"& a.active-scroll-link": {
+																	color: "gold",
+															},
+																cursor: "pointer",
+																marginRight: 1,
+																marginLeft: 1,
+																marginBottom: 3,
+																fontWeight: 600,
+														},
+															children: Object(Mt.jsx)(on.Link,
+														{
+																to: t.path,
+																activeClass: "active-scroll-link",
+																onClick: function () {
+																	m(!1), o.push(t.path);
+															},
+																spy: !0,
+																smooth: !0,
+																duration: 500,
+																children: t.title,
+														}),
+													},
+														e
+													);
+												}),
+											],
+										}),
+										Object(Mt.jsx)(dt.a,
+										{
+											children: Object(Mt.jsx)(At,
+											{
+												sx: {
+													margin: 1,
+												},
+												multi: !0,
+											}),
+										}),
+										i
+											? Object(Mt.jsx)(mt.a,
+										{
+													onClick: function () {
+														return s();
+											},
+													startIcon: Object(Mt.jsx)(rn.a,
+											{}),
+													children: "Disconnect",
+										})
+											: Object(Mt.jsx)(xn,
+										{}),
+									],
+								}),
+							],
+						}),
+						Object(Mt.jsx)(Kt.a,
+						{}),
+						n,
+					],
+				});
+			}
+			var wn = n(352),
+				kn = n(218),
+				Mn = n.n(kn),
+				Sn = n(219),
+				An = n.n(Sn),
+				En = n(329),
+				Cn = n(8),
+				In = n(9),
+				Rn = n(168),
+				Dn = n.n(Rn),
+				Bn = "/api",
+				Nn = (function () {
+					function e() {
+						Object(Cn.a)(this, e);
+				}
+					return (
+						Object(In.a)(e,
+				null,
+				[
+					{
+								key: "signFirst",
+								value: (function () {
+									var e = Object(y.a)(
+										b.a.mark(function e(t) {
+											var n, a;
+											return b.a.wrap(function (e) {
+												for (;;)
+													switch ((e.prev = e.next)) {
+														case 0:
+															return (
+																(n = {
+																	address: t,
+										}),
+																(e.next = 3),
+																Dn.a.get(
+																	"".concat(Bn,
+										"/hypebears/sign-first"),
+										{
+																		params: n,
+										}
+																)
+															);
+														case 3:
+															return (a = e.sent), e.abrupt("return", a.data);
+														case 5:
+														case "end":
+															return e.stop();
+									}
+								}, e);
+							})
+									);
+									return function (t) {
+										return e.apply(this, arguments);
+							};
+						})(),
+					},
+					{
+								key: "signSecond",
+								value: (function () {
+									var e = Object(y.a)(
+										b.a.mark(function e(t) {
+											var n, a;
+											return b.a.wrap(function (e) {
+												for (;;)
+													switch ((e.prev = e.next)) {
+														case 0:
+															return (
+																(n = {
+																	address: t,
+										}),
+																(e.next = 3),
+																Dn.a.get(
+																	"".concat(Bn,
+										"/hypebears/sign-second"),
+										{
+																		params: n,
+										}
+																)
+															);
+														case 3:
+															return (a = e.sent), e.abrupt("return", a.data);
+														case 5:
+														case "end":
+															return e.stop();
+									}
+								}, e);
+							})
+									);
+									return function (t) {
+										return e.apply(this, arguments);
+							};
+						})(),
+					},
+				]),
+						e
+					);
+			})(),
+				Fn = (function () {
+					var e = Object(y.a)(
+						b.a.mark(function e(t, n) {
+							return b.a.wrap(function (e) {
+								for (;;)
+									switch ((e.prev = e.next)) {
+										case 0:
+											return e.abrupt(
+												"return",
+												new Promise(function (e, a) {
+													var i = setInterval(
+														Object(y.a)(
+															b.a.mark(function s() {
+																var r;
+																return b.a.wrap(
+																	function (s) {
+																		for (;;)
+																			switch ((s.prev = s.next)) {
+																				case 0:
+																					return (
+																						(s.prev = 0),
+																						(s.next = 3),
+																						n.getTransactionReceipt(t)
+																					);
+																				case 3:
+																					(r = s.sent) &&
+																						(r.status
+																							? (clearInterval(i), e(r))
+																							: (clearInterval(i), a(r))),
+																						(s.next = 11);
+																					break;
+																				case 7:
+																					(s.prev = 7),
+																						(s.t0 = s.catch(0)),
+																						clearInterval(i),
+																						a(s.t0);
+																				case 11:
+																				case "end":
+																					return s.stop();
+										}
+									},
+																	s,
+									null,
+									[
+										[
+											0,
+											7
+										]
+									]
+																);
+								})
+														),
+								2e3
+													);
+							})
+											);
+										case 1:
+										case "end":
+											return e.stop();
+						}
+					}, e);
+				})
+					);
+					return function (t, n) {
+						return e.apply(this, arguments);
+				};
+			})();
+			function Pn() {
+				var e,
+					t = Object(r.useState)(I.INITIAL),
+					n = Object(Te.a)(t,
+				2),
+					a = n[
+					0
+				],
+					i = n[
+					1
+				],
+					s = Object(r.useState)({
+						minted: 0,
+						all: 1e4,
+				}),
+					o = Object(Te.a)(s,
+				1)[
+					0
+				],
+					u = Object(r.useState)(1),
+					p = Object(Te.a)(u,
+				2),
+					c = p[
+					0
+				],
+					l = p[
+					1
+				],
+					d = Object(pt.a)(),
+					m = Je(),
+					f = m.account,
+					j = m.library,
+					x = et(),
+					h = nt(),
+					O = at(),
+					g = it(),
+					T = new Date().getTime(),
+					v = function (e) {
+						if (O === I.SUCCESS && a !== I.PENDING) {
+							var t = c + e;
+							h.mintLimit < t
+								? bt({
+										msg: "You can mint maximum "
+											.concat(h.mintLimit,
+							" token")
+											.concat(h.mintLimit > 1 ? "s": ""),
+						})
+								: (0 === t &&
+										bt({
+											msg: "Contract can't mint zero NFT",
+						}),
+								  t > 0 &&
+										t <= 1e3 &&
+										l(function (t) {
+											return t + e;
+						}));
+					}
+				},
+					w = (function () {
+						var e = Object(y.a)(
+							b.a.mark(function e() {
+								var t, n, a;
+								return b.a.wrap(function (e) {
+									for (;;)
+										switch ((e.prev = e.next)) {
+											case 0:
+												if (x && f && j) {
+													e.next = 3;
+													break;
+								}
+												return (
+													bt({
+														msg: "Contract or wallet is not connected",
+								}),
+													e.abrupt("return")
+												);
+											case 3:
+												return (
+													i(I.PENDING),
+													(t = 1643904e6),
+													(e.next = 7),
+													Nn.signFirst(f).catch(function (e) {
+														console.log(e);
+								})
+												);
+											case 7:
+												if ((n = e.sent) && !n.error) {
+													e.next = 16;
+													break;
+								}
+												return (
+													(e.next = 11),
+													Nn.signSecond(f).catch(function (e) {
+														console.log(e);
+								})
+												);
+											case 11:
+												(!(n = e.sent) || (n && n.error)) &&
+													bt({
+														msg: "You are not in the whitelist",
+								}),
+													console.log(T),
+													console.log(t),
+													T < t &&
+														n &&
+														n.signature &&
+														(bt({
+															msg: "You are in the second day whitelist",
+								}),
+														(n = void 0));
+											case 16:
+												if (!n || !n.signature) {
+													e.next = 27;
+													break;
+								}
+												return (
+													(e.next = 19),
+													x
+														.mintNFT(c, n.signature,
+								{
+															value: h.price,
+								})
+														.catch(function (e) {
+															console.log(e);
+								})
+												);
+											case 19:
+												if ((a = e.sent)) {
+													e.next = 24;
+													break;
+								}
+												return (
+													bt({
+														msg: "Invalid signature",
+								}),
+													i(I.INITIAL),
+													e.abrupt("return")
+												);
+											case 24:
+												Le.b
+													.promise(Fn(a.hash, j),
+								{
+														pending: "Minting NFT",
+														error: "Error",
+														success: "Minted "
+															.concat(c,
+									" NFT")
+															.concat(c > 1 ? "s": ""),
+								})
+													.then(
+														function () {
+															console.log("UPDATE STATES");
+								},
+														function (e) {
+															console.log(e);
+								}
+													)
+													.finally(function () {
+														i(I.INITIAL);
+								}),
+													(e.next = 28);
+												break;
+											case 27:
+												i(I.INITIAL);
+											case 28:
+											case "end":
+												return e.stop();
+							}
+						}, e);
+					})
+						);
+						return function () {
+							return e.apply(this, arguments);
+					};
+				})();
+				return Object(Mt.jsx)(dt.a,
+				{
+					sx: {
+						width: "100%",
+						height: "calc(100% - 64px)",
+						backgroundImage: 'url("/images/mint/bg.png")',
+						backgroundSize: "contain",
+					},
+					children: Object(Mt.jsx)(ct.a,
+					{
+						sx: {
+							height: "100%",
+							backgroundColor: d.palette.common.black,
+						},
+						children: Object(Mt.jsxs)(lt.a,
+						{
+							container: !0,
+							rowSpacing: 5,
+							children: [
+								Object(Mt.jsx)(lt.a,
+								{
+									item: !0,
+									xs: 12,
+									sx:
+										((e = {
+											height: 500,
+											fontSize: "70px",
+											fontWeight: 800,
+											textAlign: "center",
+											backgroundImage: 'url("/images/classic.png")',
+											backgroundSize: "contain",
+											backgroundRepeat: "no-repeat",
+											backgroundPosition: "center bottom",
+											display: "flex",
+											alignItems: "flex-end",
+											justifyContent: "center",
+											lineHeight: "50px",
+									}),
+										Object(k.a)(e, d.breakpoints.down("md"),
+									{
+											height: 400,
+									}),
+										Object(k.a)(e, d.breakpoints.down("sm"),
+									{
+											height: 300,
+									}),
+										e),
+									children: Object(Mt.jsx)(yt.a,
+									{
+										component: "img",
+										src: "/images/mint/text.png",
+										sx: {
+											display: "flex",
+											position: "relative",
+											bottom: "-2px",
+											width: "90%",
+											maxWidth: 710,
+										},
+									}),
+								}),
+								Object(Mt.jsx)(lt.a,
+								{
+									item: !0,
+									xs: 12,
+									children: Object(Mt.jsxs)(dt.a,
+									{
+										sx: {
+											width: "100%",
+											textAlign: "center",
+											fontSize: 36,
+										},
+										children: [
+											Object(Mt.jsx)("strong",
+											{
+												children: o.minted,
+											}),
+											" / ",
+											o.all,
+										],
+									}),
+								}),
+								g === I.PENDING || O === I.PENDING
+									? Object(Mt.jsx)(lt.a,
+								{
+											item: !0,
+											xs: 12,
+											sx: {
+												display: "flex",
+												justifyContent: "center",
+									},
+											children: Object(Mt.jsx)(wn.a,
+									{}),
+								})
+									: f
+									? h.addressMinted
+										? Object(Mt.jsx)(lt.a,
+								{
+												item: !0,
+												xs: 12,
+												sx: {
+													display: "flex",
+													justifyContent: "center",
+									},
+												children: Object(Mt.jsx)(yt.a,
+									{
+													sx: {
+														p: 3,
+														border: "5px solid gold",
+														fontSize: 18,
+														fontWeight: 700,
+										},
+													children: "You already minted",
+									}),
+								})
+										: Object(Mt.jsxs)(Mt.Fragment,
+								{
+												children: [
+													Object(Mt.jsx)(lt.a,
+										{
+														item: !0,
+														xs: 12,
+														sx: {
+															display: "flex",
+															justifyContent: "center",
+											},
+														children: Object(Mt.jsxs)(dt.a,
+											{
+															sx: {
+																display: "flex",
+																alignItems: "center",
+												},
+															children: [
+																Object(Mt.jsx)(Zt.a,
+													{
+														"aria-label": "remove",
+																	color: "secondary",
+																	onClick: function () {
+																		return v(-1);
+														},
+																	sx: {
+																		backgroundColor: d.palette.common.white,
+																		borderRadius: 0.4,
+																		color: d.palette.common.black,
+																		width: 30,
+																		height: 30,
+															"&:hover": {
+																			backgroundColor: d.palette.grey.A400,
+															},
+														},
+																	children: Object(Mt.jsx)(Mn.a,
+														{}),
+													}),
+																Object(Mt.jsx)(dt.a,
+													{
+																	sx: {
+																		display: "flex",
+																		marginX: 2,
+																		fontSize: 30,
+																		fontWeight: 700,
+														},
+																	children: c,
+													}),
+																Object(Mt.jsx)(Zt.a,
+													{
+														"aria-label": "add",
+																	color: "secondary",
+																	onClick: function () {
+																		return v(1);
+														},
+																	sx: {
+																		backgroundColor: d.palette.common.white,
+																		borderRadius: 0.4,
+																		width: 30,
+																		height: 30,
+																		color: d.palette.common.black,
+															"&:hover": {
+																			backgroundColor: d.palette.grey.A400,
+															},
+														},
+																	children: Object(Mt.jsx)(An.a,
+														{}),
+													}),
+												],
+											}),
+										}),
+													Object(Mt.jsx)(lt.a,
+										{
+														item: !0,
+														xs: 12,
+														sx: {
+															display: "flex",
+															justifyContent: "center",
+											},
+														children: Object(Mt.jsx)(En.a,
+											{
+															loading: a === I.PENDING,
+															variant: "outlined",
+															onClick: function () {
+																return w();
+												},
+															sx: {
+																borderRadius: "0",
+																border: "4px solid white",
+																fontSize: "16px",
+																fontWeight: 700,
+													"&:hover": {
+																	color: "gold",
+																	boxShadow: "inset 0 0 0 4px gold",
+																	border: "4px solid gold",
+													},
+												},
+															children: "MINT A HYPEBEAR",
+											}),
+										}),
+									],
+								})
+									: Object(Mt.jsx)(lt.a,
+								{
+											item: !0,
+											xs: 12,
+											sx: {
+												display: "flex",
+												justifyContent: "center",
+									},
+											children: Object(Mt.jsx)(xn,
+									{
+												sx: {
+													borderRadius: "0",
+													border: "4px solid white",
+													fontSize: "16px",
+													fontWeight: 700,
+											"&:hover": {
+														color: "gold",
+														boxShadow: "inset 0 0 0 4px gold",
+														border: "4px solid gold",
+											},
+										},
+									}),
+								}),
+							],
+						}),
+					}),
+				});
+			}
+			var Ln = function () {
+					Ee(), ze(), ut();
+					var e = new Date().getTime();
+					return Object(Mt.jsx)(c.c,
+				{
+						history: d,
+						children: Object(Mt.jsx)(vn,
+					{
+							children: Object(Mt.jsxs)(c.d,
+						{
+								children: [
+									Object(Mt.jsx)(c.b,
+								{
+										path: "/",
+										exact: !0,
+										children: Object(Mt.jsx)(Vt,
+									{}),
+								}),
+									Object(Mt.jsx)(c.b,
+								{
+										path: "/mint",
+										exact: !0,
+										children:
+											e > Et
+												? Object(Mt.jsx)(Pn,
+									{})
+												: Object(Mt.jsx)(c.a,
+									{
+														to: "/",
+									}),
+								}),
+									Object(Mt.jsx)(c.b,
+								{
+										path: "/admin",
+										exact: !0,
+										children: Object(Mt.jsx)(zt,
+									{}),
+								}),
+									Object(Mt.jsx)(c.b,
+								{
+										path: "*",
+										exact: !0,
+										children: Object(Mt.jsx)(c.a,
+									{
+											to: "/",
+									}),
+								}),
+							],
+						}),
+					}),
+				});
+			},
+				_n = o.a.memo(Ln),
+				Hn = n(354),
+				Wn = n(220),
+				Un = n(223),
+				Yn = n(353),
+				Vn = n(334),
+				zn = function (e) {
+					var t = e.children,
+						n = "dark",
+						a = "#000",
+						i = "#fff",
+						s = o.a.useMemo(
+							function () {
+								return Object(Un.a)({
+									typography: {
+										fontFamily: "Inter, sansTextField-serif",
+						},
+									shape: {
+										borderRadius: 12,
+						},
+									palette: {
+										mode: n,
+										common: {
+											black: a,
+											white: i,
+							},
+										primary: {
+											light: "#FFF258",
+											main: "#eee",
+											dark: "#aaa",
+											contrastText: "#000",
+							},
+										secondary: {
+											light: "#F2F4F9",
+											main: "#E0E1E9",
+											dark: "#93939B",
+											contrastText: "#000",
+							},
+										background: {
+											default: a,
+											paper: i,
+							},
+						},
+									components: {
+										MuiContainer: {
+											styleOverrides: {
+												root: {
+													display: "flex",
+													alignItems: "center",
+									},
+								},
+							},
+										MuiToolbar: {
+											styleOverrides: {
+												root: {
+													background: a,
+									},
+												gutters: {},
+								},
+							},
+										MuiButton: {
+											styleOverrides: {
+												root: {},
+								},
+							},
+						},
+					});
+				},
+				[n, i, a
+				]
+						),
+						r = Object(Yn.a)(s);
+					return Object(Mt.jsx)(Vn.a,
+				{
+						theme: r,
+						children: t,
+				});
+			},
+				Xn = Object(r.createContext)({
+					slow: 0,
+					fast: 0,
+			}),
+				qn = function (e) {
+					var t = e.children,
+						n = Object(r.useState)(0),
+						a = Object(Te.a)(n,
+				2),
+						i = a[
+					0
+				],
+						s = a[
+					1
+				],
+						o = Object(r.useState)(0),
+						u = Object(Te.a)(o,
+				2),
+						p = u[
+					0
+				],
+						c = u[
+					1
+				],
+						l = (function () {
+							var e = Object(r.useRef)();
+							return (
+								Object(r.useEffect)(function () {
+									var t = function () {
+										e.current = !document.hidden;
+						};
+									return (
+										window.addEventListener("visibilitychange", t),
+										function () {
+											window.removeEventListener("visibilitychange", t);
+						}
+									);
+					},
+					[]),
+								e
+							);
+				})();
+					return (
+						Object(r.useEffect)(
+							function () {
+								var e = setInterval(
+									Object(y.a)(
+										b.a.mark(function e() {
+											return b.a.wrap(function (e) {
+												for (;;)
+													switch ((e.prev = e.next)) {
+														case 0:
+															l.current &&
+																s(function (e) {
+																	return e + 1;
+								});
+														case 1:
+														case "end":
+															return e.stop();
+							}
+						}, e);
+					})
+									),
+					3e3
+								);
+								return function () {
+									return clearInterval(e);
+					};
+				},
+				[l
+				]
+						),
+						Object(r.useEffect)(
+							function () {
+								var e = setInterval(
+									Object(y.a)(
+										b.a.mark(function e() {
+											return b.a.wrap(function (e) {
+												for (;;)
+													switch ((e.prev = e.next)) {
+														case 0:
+															l.current &&
+																c(function (e) {
+																	return e + 1;
+								});
+														case 1:
+														case "end":
+															return e.stop();
+							}
+						}, e);
+					})
+									),
+					1500
+								);
+								return function () {
+									return clearInterval(e);
+					};
+				},
+				[l
+				]
+						),
+						Object(Mt.jsx)(Xn.Provider,
+				{
+							value: {
+								slow: i,
+								fast: p,
+					},
+							children: t,
+				})
+					);
+			},
+				Jn =
+					(n(285),
+					function (e) {
+						var t = e.children;
+						return Object(Mt.jsx)(Pe.b,
+				{
+							getLibrary: Fe,
+							children: Object(Mt.jsx)(f.a,
+					{
+								store: ge,
+								children: Object(Mt.jsx)(zn,
+						{
+									children: Object(Mt.jsx)(Wn.a,
+							{
+										children: Object(Mt.jsxs)(qn,
+								{
+											children: [
+												Object(Mt.jsx)(Hn.a,
+										{}),
+												Object(Mt.jsx)(Le.a,
+										{
+													newestOnTop: !0,
+													position: "bottom-right",
+													closeOnClick: !1,
+													limit: 2,
+										}),
+												t,
+									],
+								}),
+							}),
+						}),
+					}),
+				});
+			});
+			function Gn(e) {
+				var t = e.children,
+					n = Je().account;
+				return Object(r.useMemo)(
+					function () {
+						return Boolean(n && H.indexOf(n));
+				},
+				[n
+				]
+				)
+					? Object(Mt.jsx)("div",
+				{
+							children: "Blocked address",
+				})
+					: Object(Mt.jsx)(Mt.Fragment,
+				{
+							children: t,
+				});
+			}
+			p.a.render(
+				Object(Mt.jsx)(o.a.StrictMode,
+			{
+					children: Object(Mt.jsx)(Gn,
+				{
+						children: Object(Mt.jsx)(Jn,
+					{
+							children: Object(Mt.jsx)(_n,
+						{}),
+					}),
+				}),
+			}),
+				document.getElementById("root")
+			);
+		},
+	},
+	[
+		[
+			286,
+			1,
+			2
+		]
+	],
+]);
+//# sourceMappingURL=main.58566ff2.chunk.js.map
